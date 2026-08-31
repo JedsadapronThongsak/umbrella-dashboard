@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+<meta name="theme-color" content="#07101b" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Wind Guard" />
+<title>Spring Wind Guard · Mobile</title>
+<script>
+window.__mqttFallbackStarted = false;
+function loadMqttFallback(){
+  if(window.__mqttFallbackStarted) return;
+  window.__mqttFallbackStarted = true;
+  var s=document.createElement('script');
+  s.src='https://cdn.jsdelivr.net/npm/mqtt@5.15.2/dist/mqtt.min.js';
+  s.async=true;
+  document.head.appendChild(s);
+}
+</script>
+<script src="https://unpkg.com/mqtt@5.15.2/dist/mqtt.min.js" onerror="loadMqttFallback()"></script>
+<style>
+:root{
+  --bg:#07101b;--panel:#0e1b2b;--panel2:#12243a;--line:#263d57;
+  --text:#edf5ff;--muted:#91a7bf;--ok:#56e39f;--warn:#ffd166;
+  --danger:#ff6b7a;--info:#66c7ff;--purple:#bc9cff;--shadow:0 12px 34px rgba(0,0,0,.28)
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:linear-gradient(165deg,#040a11 0%,#07101b 42%,#0b1725 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Tahoma,sans-serif}
+body{padding-bottom:calc(18px + env(safe-area-inset-bottom))}
+button,input{font:inherit}
+button{touch-action:manipulation}
+.app{width:min(100%,620px);margin:0 auto;padding:calc(10px + env(safe-area-inset-top)) 12px 18px;overflow-x:hidden}
+.topbar{position:sticky;top:0;z-index:8;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 2px 12px;background:linear-gradient(180deg,rgba(7,16,27,.98) 72%,rgba(7,16,27,0))}
+.brand{min-width:0}.brand h1{font-size:18px;line-height:1.1;margin:0;font-weight:900;letter-spacing:.02em}.brand p{font-size:11px;margin:4px 0 0;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.iconbtn{width:44px;height:44px;border-radius:14px;border:1px solid var(--line);background:#0b1827;color:var(--text);font-size:20px;display:grid;place-items:center;box-shadow:var(--shadow)}
+.conn{display:flex;align-items:center;gap:7px;border:1px solid var(--line);padding:8px 10px;border-radius:999px;background:#0a1624;font-size:11px;font-weight:800;white-space:nowrap}.dot{width:8px;height:8px;border-radius:50%;background:var(--danger);box-shadow:0 0 0 4px rgba(255,107,122,.09)}.conn.on .dot{background:var(--ok);box-shadow:0 0 0 4px rgba(86,227,159,.09)}
+.hero{border:1px solid #203851;border-radius:24px;padding:16px;background:radial-gradient(circle at 85% 10%,rgba(102,199,255,.10),transparent 32%),linear-gradient(145deg,#0e1b2b,#0a1624);box-shadow:var(--shadow)}
+.heroTop{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800}.state{font-size:31px;font-weight:950;margin-top:5px;line-height:1}.substate{font-size:12px;color:var(--muted);margin-top:7px}.riskWrap{text-align:right}.riskVal{font-size:34px;font-weight:950;line-height:1}.riskLbl{font-size:11px;color:var(--muted);margin-top:5px}.riskbar{height:10px;border-radius:999px;overflow:hidden;background:#17283a;margin-top:14px}.riskbar>div{height:100%;width:0;background:linear-gradient(90deg,var(--ok),var(--warn),var(--danger));transition:width .25s}
+.quickgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.card{border:1px solid #20364e;background:rgba(14,27,43,.95);border-radius:19px;padding:13px;box-shadow:0 8px 24px rgba(0,0,0,.18)}.card .lab{font-size:10px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;font-weight:800}.card .val{font-size:22px;font-weight:900;margin-top:6px;white-space:nowrap}.card .lim{font-size:10px;color:#9bb0c5;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.statusrow{display:grid;grid-template-columns:1.15fr 1fr;gap:10px;margin-top:10px}.permit{display:flex;flex-direction:column;justify-content:center}.permit strong{font-size:18px;margin-top:5px}.permit.ok strong{color:var(--ok)}.permit.bad strong{color:var(--danger)}.hz strong{font-size:24px;color:var(--info)}
+.section{margin-top:12px}.sectionTitle{display:flex;justify-content:space-between;align-items:center;margin:0 2px 8px}.sectionTitle h2{font-size:13px;margin:0;letter-spacing:.05em}.sectionTitle span{font-size:10px;color:var(--muted)}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.action{min-height:58px;border-radius:18px;border:1px solid #2a4563;color:white;font-weight:900;font-size:15px}.close{background:linear-gradient(145deg,#812f3b,#57222a);border-color:#a54855}.open{background:linear-gradient(145deg,#186d63,#104b46);border-color:#2b8c80}.ack{background:#493b68}.secondary{background:#173453}.action:disabled{opacity:.38;filter:grayscale(.4)}
+.chartCard{height:220px;overflow:hidden}.chartBox{position:relative;width:100%;height:170px;margin-top:8px;overflow:hidden;min-width:0}.chartBox canvas{display:block;width:100%!important;height:100%!important;max-width:100%;max-height:100%;min-width:0}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:8px}.kv div{padding:10px;border-radius:13px;background:#091624;border:1px solid #1b3149;font-size:11px;color:var(--muted)}.kv b{display:block;color:var(--text);font-size:14px;margin-top:4px}
+details{border:1px solid #20364e;border-radius:18px;background:rgba(14,27,43,.95);overflow:hidden;margin-top:10px}summary{list-style:none;cursor:pointer;padding:14px 15px;font-size:13px;font-weight:900;display:flex;justify-content:space-between;align-items:center}summary::-webkit-details-marker{display:none}.detailsBody{padding:0 14px 14px}.hint{font-size:11px;color:var(--muted);line-height:1.5}
+.cfggrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.cfgitem{background:#091624;padding:9px;border-radius:12px;border:1px solid #1b3149}.cfgitem label{display:block;font-size:10px;color:var(--muted);margin-bottom:5px}.cfgitem input[type=number]{width:100%;border-radius:9px;border:1px solid #2a4563;background:#07131f;color:white;padding:9px}.check{display:flex;align-items:center;gap:8px}.check input{width:20px;height:20px}.cfgactions{display:flex;gap:8px;margin-top:10px}.cfgactions button{flex:1;border-radius:13px;border:1px solid #2a4563;padding:11px;color:white;font-weight:900;background:#173453}.cfgactions button:disabled{opacity:.38}
+.triggerBox{padding:12px;border-radius:14px;background:#091624;border:1px solid #1b3149}.triggerTitle{font-size:16px;font-weight:900}.triggerReason{font-size:11px;color:var(--muted);margin-top:5px;word-break:break-word}
+.log{max-height:190px;overflow:auto;background:#06101b;border-radius:12px;padding:9px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:10px;color:#b7c8d8}.log div{padding:4px 0;border-bottom:1px dotted #1d3045}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(7px);z-index:30;display:none;align-items:flex-end;justify-content:center;padding:10px}.modal.show{display:flex}.sheet{width:min(100%,620px);background:#0c1928;border:1px solid #29425d;border-radius:24px 24px 16px 16px;padding:16px;box-shadow:0 22px 70px rgba(0,0,0,.55);max-height:92vh;overflow:auto}.sheet h3{margin:0 0 4px}.sheet p{margin:0 0 13px;color:var(--muted);font-size:11px;line-height:1.45}.form{display:grid;gap:9px}.field label{display:block;font-size:10px;color:var(--muted);margin:0 0 5px 3px}.field input{width:100%;padding:12px;border:1px solid #2a4563;border-radius:12px;background:#07131f;color:white}.sheetActions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}.sheetActions button{padding:12px;border-radius:13px;border:1px solid #2a4563;color:white;font-weight:900;background:#173453}.sheetActions .primary{background:#155e58;border-color:#2c8c80}.passwordRow{display:flex;gap:8px}.passwordRow input{flex:1}.showPass{width:74px;border-radius:12px;border:1px solid #2a4563;background:#132a42;color:white;font-weight:800}
+.footer{text-align:center;color:#7288a0;font-size:10px;margin-top:15px;padding:0 10px;line-height:1.5}
+@media(min-width:640px){.app{padding-left:18px;padding-right:18px}.state{font-size:35px}.quickgrid{gap:12px}}
+@media(min-width:900px){.app{width:min(100%,900px)}.chartCard{height:250px}.chartBox{height:200px}.hero{padding:20px}.quickgrid,.statusrow,.actions{gap:14px}}
+@media(max-width:480px){.chartCard{height:205px}.chartBox{height:155px}}
+@media(max-width:380px){.quickgrid{grid-template-columns:1fr}.statusrow{grid-template-columns:1fr}.cfggrid{grid-template-columns:1fr}.actions{grid-template-columns:1fr}.brand p{max-width:210px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div class="brand"><h1>☂ SPRING WIND GUARD</h1><p id="deviceCaption">umbrella-001 · Mobile Dashboard V1</p></div>
+    <div style="display:flex;gap:8px;align-items:center"><div id="connBadge" class="conn"><span class="dot"></span><span id="connText">OFFLINE</span></div><button id="settingsBtn" class="iconbtn" aria-label="Connection settings">⚙</button></div>
+  </div>
+
+  <section class="hero">
+    <div class="heroTop">
+      <div><div class="eyebrow">Safety state</div><div id="state" class="state">--</div><div id="onlineText" class="substate">Waiting for device</div></div>
+      <div class="riskWrap"><div id="risk" class="riskVal">--%</div><div class="riskLbl">WIND RISK</div></div>
+    </div>
+    <div class="riskbar"><div id="riskBar"></div></div>
+  </section>
+
+  <div class="quickgrid">
+    <div class="card"><div class="lab">Spring RMS</div><div id="rms" class="val">--</div><div id="rmsLimit" class="lim">CLOSE -- g</div></div>
+    <div class="card"><div class="lab">Gust / Shock</div><div id="gust" class="val">--</div><div id="gustLimit" class="lim">EMERG -- g</div></div>
+    <div class="card"><div class="lab">Deflection</div><div id="def" class="val">--</div><div id="defLimit" class="lim">CLOSE --°</div></div>
+  </div>
+
+  <div class="statusrow">
+    <div id="permitCard" class="card permit"><div class="lab">Open permission</div><strong id="openAllowed">--</strong><div id="closeReq" class="lim">Close request --</div></div>
+    <div class="card hz"><div class="lab">Sensor rate</div><strong id="sensorHz">-- Hz</strong><div id="rssi" class="lim">Wi-Fi -- dBm</div></div>
+  </div>
+
+  <section class="section">
+    <div class="sectionTitle"><h2>REMOTE CONTROL</h2><span>Local safety always has priority</span></div>
+    <div class="actions">
+      <button id="closeBtn" class="action close" disabled>▼ CLOSE UMBRELLA</button>
+      <button id="openBtn" class="action open" disabled>▲ OPEN UMBRELLA</button>
+      <button id="ackBtn" class="action ack" disabled>ACK / CLEAR ALARM</button>
+      <button id="pingBtn" class="action secondary" disabled>PING DEVICE</button>
+    </div>
+    <div id="controlHint" class="hint" style="margin:8px 4px 0">OPEN locked until local safety allows it.</div>
+  </section>
+
+  <section class="section card chartCard">
+    <div class="sectionTitle"><h2>WIND RISK TREND</h2><span>latest samples</span></div>
+    <div class="chartBox"><canvas id="trend"></canvas></div>
+  </section>
+
+  <section class="section">
+    <details open>
+      <summary><span>SYSTEM STATUS</span><span>⌄</span></summary>
+      <div class="detailsBody"><div class="kv">
+        <div>STRONG TIMER<b id="strong">--</b></div><div>CALM TIMER<b id="calm">--</b></div>
+        <div>SENSITIVITY<b id="sens">--</b></div><div>TEMPERATURE<b id="temp">--</b></div>
+        <div>ZERO<b id="zero">--</b></div><div>OFFSET<b id="offset">--</b></div>
+        <div>AUTO CLOSE<b id="autoClose">--</b></div><div>AUTO RE-OPEN<b id="autoReopen">--</b></div>
+      </div></div>
+    </details>
+
+    <details>
+      <summary><span>LAST TRIGGER</span><span>⌄</span></summary>
+      <div class="detailsBody"><div class="triggerBox"><div id="trigger" class="triggerTitle">NO TRIGGER</div><div id="triggerReason" class="triggerReason">--</div></div></div>
+    </details>
+
+    <details>
+      <summary><span>SAFETY CONFIG</span><span>⌄</span></summary>
+      <div class="detailsBody">
+        <div class="hint" style="margin-bottom:9px">ค่าจาก ESP32 จะ Sync มาที่นี่อัตโนมัติ และการ APPLY จะถูกตรวจ range ที่ ESP32 ก่อนบันทึก NVS.</div>
+        <div class="cfggrid">
+          <div class="cfgitem"><label>WIND SENSITIVITY (x)</label><input id="cfgSens" type="number" step="0.1" min="0.2" max="5"></div>
+          <div class="cfgitem"><label>SPRING RMS CLOSE (g)</label><input id="cfgRms" type="number" step="0.001" min="0.02" max="3"></div>
+          <div class="cfgitem"><label>DEFLECT CLOSE (deg)</label><input id="cfgDef" type="number" step="0.1" min="2" max="50"></div>
+          <div class="cfgitem"><label>GUST EMERGENCY (g)</label><input id="cfgGust" type="number" step="0.01" min="0.05" max="4"></div>
+          <div class="cfgitem"><label>STRONG WIND TIME (sec)</label><input id="cfgStrong" type="number" step="0.1" min="0" max="30"></div>
+          <div class="cfgitem"><label>CALM WIND TIME (min)</label><input id="cfgCalm" type="number" step="0.01" min="0" max="300"></div>
+          <div class="cfgitem check"><input id="cfgAutoClose" type="checkbox"><label for="cfgAutoClose">AUTO CLOSE</label></div>
+          <div class="cfgitem check"><input id="cfgAutoReopen" type="checkbox"><label for="cfgAutoReopen">AUTO RE-OPEN</label></div>
+        </div>
+        <div class="cfgactions"><button id="applyCfgBtn" disabled>APPLY TO DEVICE</button><button id="notifyBtn">NOTIFICATIONS</button></div>
+        <div id="cfgStatus" class="hint" style="margin-top:8px">Waiting for retained device config</div>
+      </div>
+    </details>
+
+    <details>
+      <summary><span>EVENT LOG</span><span>⌄</span></summary>
+      <div class="detailsBody"><div id="log" class="log"></div></div>
+    </details>
+  </section>
+
+  <div class="footer">ESP32 local wind safety remains authoritative. Cloud loss must never disable wind protection.<br>Dashboard credentials are entered at runtime; password is not saved in Local Storage.</div>
+</div>
+
+<div id="connectModal" class="modal">
+  <div class="sheet">
+    <h3>Cloud Connection</h3>
+    <p>เชื่อมต่อ HiveMQ Cloud ผ่าน WSS :8884/mqtt สำหรับดูสถานะและควบคุมจาก Smartphone</p>
+    <div class="form">
+      <div class="field"><label>HIVEMQ HOST</label><input id="host" placeholder="abc.s1.eu.hivemq.cloud" autocapitalize="none" spellcheck="false"></div>
+      <div class="field"><label>DEVICE ID</label><input id="device" value="umbrella-001" autocapitalize="none" spellcheck="false"></div>
+      <div class="field"><label>DASHBOARD MQTT USERNAME</label><input id="user" autocomplete="username" autocapitalize="none" spellcheck="false"></div>
+      <div class="field"><label>DASHBOARD MQTT PASSWORD</label><div class="passwordRow"><input id="pass" type="password" autocomplete="current-password"><button id="showPassBtn" class="showPass">SHOW</button></div></div>
+    </div>
+    <div class="hint" style="margin-top:10px">Host / Device / Username สามารถจำไว้ในเครื่องได้ แต่ Password จะไม่บันทึกไว้.</div>
+    <div id="connectError" class="hint" style="margin-top:8px;color:#ffb8b8;min-height:18px"></div>
+    <div id="runtimeInfo" class="hint" style="margin-top:4px"></div>
+    <div class="sheetActions"><button id="closeModalBtn">CANCEL</button><button id="connectBtn" class="primary">CONNECT</button></div>
+    <button id="disconnectBtn" style="display:none;width:100%;margin-top:9px;padding:12px;border-radius:13px;border:1px solid #663943;background:#5b242c;color:white;font-weight:900">DISCONNECT</button>
+  </div>
+</div>
+
+<script>
+let client=null, base='', lastTelemetry=null, lastStatus=null, lastConfig=null, configDirty=false;
+const $=id=>document.getElementById(id);
+const safeJson=s=>{try{return JSON.parse(s)}catch(e){log('JSON error: '+e.message);return null}};
+const f=(v,n=2)=>Number.isFinite(Number(v))?Number(v).toFixed(n):'--';
+const boolText=v=>v===true?'YES':v===false?'NO':'--';
+const log=m=>{const d=document.createElement('div');d.textContent=`${new Date().toLocaleTimeString()}  ${m}`;$('log').prepend(d)};
+function safeStorageGet(key){try{return window.localStorage?localStorage.getItem(key):null}catch(e){return null}}
+function safeStorageSet(key,val){try{if(window.localStorage)localStorage.setItem(key,val);return true}catch(e){return false}}
+let stored={};try{stored=JSON.parse(safeStorageGet('swgMobileUi')||'{}')||{}}catch(e){stored={}}
+$('host').value=stored.host||'';$('device').value=stored.device||'umbrella-001';$('user').value=stored.user||'';
+$('deviceCaption').textContent=($('device').value||'umbrella-001')+' · Mobile Dashboard V1.4';
+
+const trendCanvas=$('trend');
+const trendBox=trendCanvas?.parentElement;
+const trendCtx=trendCanvas && trendCanvas.getContext ? trendCanvas.getContext('2d') : null;
+const trendData=[];
+let trendResizeRaf=0;
+function drawTrend(){
+  if(!trendCtx || !trendCanvas || !trendBox) return;
+  const cssW=Math.max(10,Math.floor(trendBox.clientWidth));
+  const cssH=Math.max(10,Math.floor(trendBox.clientHeight));
+  const dpr=Math.min(3,Math.max(1,window.devicePixelRatio||1));
+  const pixelW=Math.max(10,Math.round(cssW*dpr));
+  const pixelH=Math.max(10,Math.round(cssH*dpr));
+  if(trendCanvas.width!==pixelW || trendCanvas.height!==pixelH){
+    trendCanvas.width=pixelW;
+    trendCanvas.height=pixelH;
+  }
+  // Draw in CSS-pixel coordinates. CSS fixes the canvas visual size, so
+  // changing the internal bitmap cannot feed back and enlarge the layout.
+  trendCtx.setTransform(dpr,0,0,dpr,0,0);
+  trendCtx.clearRect(0,0,cssW,cssH);
+  trendCtx.strokeStyle='rgba(145,167,191,.25)';
+  trendCtx.lineWidth=1;
+  for(let i=1;i<4;i++){
+    const y=cssH*i/4;
+    trendCtx.beginPath();trendCtx.moveTo(0,y);trendCtx.lineTo(cssW,y);trendCtx.stroke();
+  }
+  if(trendData.length<2) return;
+  trendCtx.strokeStyle='#55d6be';
+  trendCtx.lineWidth=2;
+  trendCtx.beginPath();
+  trendData.forEach((v,i)=>{
+    const x=i*(cssW/Math.max(1,trendData.length-1));
+    const y=cssH-(Math.max(0,Math.min(100,v))/100)*cssH;
+    if(i===0) trendCtx.moveTo(x,y); else trendCtx.lineTo(x,y);
+  });
+  trendCtx.stroke();
+}
+function scheduleTrendDraw(){
+  cancelAnimationFrame(trendResizeRaf);
+  trendResizeRaf=requestAnimationFrame(drawTrend);
+}
+function pushTrend(t){
+  trendData.push(Number(t.risk||0));
+  if(trendData.length>90)trendData.shift();
+  scheduleTrendDraw();
+}
+window.addEventListener('resize',scheduleTrendDraw,{passive:true});
+window.addEventListener('orientationchange',()=>setTimeout(scheduleTrendDraw,120),{passive:true});
+if('ResizeObserver' in window && trendBox){
+  const trendRO=new ResizeObserver(scheduleTrendDraw);
+  trendRO.observe(trendBox);
+}
+setTimeout(scheduleTrendDraw,0);
+function stateColor(s){s=String(s||'').toUpperCase();if(s.includes('EMERGENCY')||s.includes('DANGER')||s.includes('LOCK'))return 'var(--danger)';if(s.includes('WARNING'))return 'var(--warn)';if(s.includes('NORMAL')||s.includes('SAFE'))return 'var(--ok)';return 'var(--text)'}
+function setConnected(ok){$('connBadge').className='conn '+(ok?'on':'');$('connText').textContent=ok?'BROKER ONLINE':'OFFLINE';$('connectBtn').disabled=ok;$('disconnectBtn').style.display=ok?'block':'none';['closeBtn','ackBtn','pingBtn'].forEach(id=>$(id).disabled=!ok);$('applyCfgBtn').disabled=!(ok&&lastConfig?.remoteConfig===true);const d=$('brokerDiag');if(d)d.textContent='BROKER: '+(ok?'ONLINE':'OFFLINE');updateOpenButton()}
+function updateOpenButton(){const ok=client?.connected && lastStatus?.openAllowed===true;$('openBtn').disabled=!ok;$('controlHint').textContent=ok?'OPEN ALLOWED by local safety. ESP32 will re-check again before opening.':'OPEN locked until local wind safety reports OPEN ALLOWED.';$('permitCard').className='card permit '+(lastStatus?.openAllowed===true?'ok':'bad')}
+function renderTelemetry(t){lastTelemetry=t;$('state').textContent=t.state||'--';$('state').style.color=stateColor(t.state);$('risk').textContent=f(t.risk,0)+'%';$('riskBar').style.width=Math.max(0,Math.min(100,Number(t.risk||0)))+'%';$('rms').textContent=f(t.rms,3)+' g';$('rmsLimit').textContent='CLOSE '+f(t.rmsClose,3)+' g';$('gust').textContent=f(t.gust,3)+' g';$('gustLimit').textContent='EMERG '+f(t.gustEmergency,2)+' g';$('def').textContent=f(t.deflection,1)+'°';$('defLimit').textContent='CLOSE '+f(t.deflectClose,1)+'°';$('strong').textContent=f(t.strongElapsedSec,1)+' / '+f(t.strongTargetSec,1)+' s';$('calm').textContent=f(Number(t.calmElapsedSec||0)/60,2)+' / '+f(t.calmTargetMin,2)+' min';$('sens').textContent=f(t.sensitivity,2)+'x';$('rssi').textContent='Wi-Fi '+(t.wifiRssi??'--')+' dBm';$('sensorHz').textContent=f(t.sensorHz,1)+' Hz';$('temp').textContent=f(t.temperatureC,1)+' °C';$('zero').textContent=boolText(t.zeroOk);$('offset').textContent=boolText(t.offsetOk);$('openAllowed').textContent=boolText(t.openAllowed);$('closeReq').textContent='Close request '+boolText(t.closeRequested);pushTrend(t)}
+function renderStatus(s){lastStatus=s;$('onlineText').textContent=s.online?'DEVICE ONLINE':'DEVICE OFFLINE';if(s.state){$('state').textContent=s.state;$('state').style.color=stateColor(s.state)}if(s.risk!==undefined){$('risk').textContent=f(s.risk,0)+'%';$('riskBar').style.width=Math.max(0,Math.min(100,Number(s.risk||0)))+'%'}$('openAllowed').textContent=boolText(s.openAllowed);$('closeReq').textContent='Close request '+boolText(s.closeRequested);$('zero').textContent=boolText(s.zeroOk);$('offset').textContent=boolText(s.offsetOk);$('autoClose').textContent=boolText(s.autoClose);$('autoReopen').textContent=boolText(s.autoReopen);$('rssi').textContent='Wi-Fi '+(s.wifiRssi??'--')+' dBm';updateOpenButton()}
+function renderConfig(c){lastConfig=c;if(!configDirty){$('cfgSens').value=Number(c.sensitivity??1);$('cfgRms').value=Number(c.rmsClose??0.1);$('cfgDef').value=Number(c.deflectClose??15);$('cfgGust').value=Number(c.gustEmergency??0.35);$('cfgStrong').value=Number(c.strongWindSec??5);$('cfgCalm').value=Number(c.calmWindMin??0.5);$('cfgAutoClose').checked=c.autoClose===true;$('cfgAutoReopen').checked=c.autoReopen===true;}const enabled=c.remoteConfig===true;$('applyCfgBtn').disabled=!(client?.connected&&enabled);$('cfgStatus').textContent=enabled?`REMOTE CONFIG ON · source ${c.source||'--'}${configDirty?' · UNSAVED EDIT':''}`:'REMOTE CONFIG OFF ON DEVICE';$('autoClose').textContent=boolText(c.autoClose);$('autoReopen').textContent=boolText(c.autoReopen)}
+function renderTrigger(t){$('trigger').textContent=`TRIGGER ${t.trigger||'NONE'} #${t.seq??0}`;$('triggerReason').textContent=t.reason||'--';if(Notification.permission==='granted'&&(t.trigger==='OPEN'||t.trigger==='CLOSE'))new Notification(`Umbrella ${t.trigger}`,{body:t.reason||''})}
+function publishSafe(topic,payload,label){if(!client?.connected){log('TX BLOCKED '+label+' · broker offline');return false}try{client.publish(topic,payload,{qos:0,retain:false},err=>{if(err)log('TX ERROR '+label+' · '+err.message);else log('TX OK '+label+' · QoS0')});log('TX SEND '+label+' → '+topic);return true}catch(e){log('TX EXCEPTION '+label+' · '+e.message);return false}}
+function send(cmd){if(!client?.connected)return;if(cmd==='CLOSE'&&!confirm('ส่ง CLOSE ไปยังร่มหรือไม่?'))return;if(cmd==='OPEN'&&!confirm('ส่ง OPEN หรือไม่? ESP32 จะเปิดเฉพาะเมื่อ Local Safety อนุญาต'))return;publishSafe(base+'/cmd',cmd,'CMD '+cmd)}
+function applyConfig(){if(!client?.connected||!lastConfig?.remoteConfig){alert('Remote config ยังไม่เปิดที่ ESP32');return}const payload={sensitivity:Number($('cfgSens').value),rmsClose:Number($('cfgRms').value),deflectClose:Number($('cfgDef').value),gustEmergency:Number($('cfgGust').value),strongWindSec:Number($('cfgStrong').value),calmWindMin:Number($('cfgCalm').value),autoClose:$('cfgAutoClose').checked,autoReopen:$('cfgAutoReopen').checked};if(!confirm('Apply safety config นี้ไปยัง ESP32 และ Save NVS หรือไม่?'))return;configDirty=false;publishSafe(base+'/config/set',JSON.stringify(payload),'CONFIG SET');$('cfgStatus').textContent='CONFIG SENT · waiting ACK...'}
+function openModal(){ $('connectModal').classList.add('show') }
+function closeModal(){ $('connectModal').classList.remove('show') }
+function normalizeHost(v){return String(v||'').trim().replace(/^wss?:\/\//i,'').replace(/\/mqtt\/?$/i,'').replace(/:8884$/,'').replace(/\/$/,'')}
+function setConnectError(msg){$('connectError').textContent=msg||''}
+function connectCloud(){
+  const host=normalizeHost($('host').value),dev=$('device').value.trim(),user=$('user').value.trim(),pass=$('pass').value;
+  $('host').value=host;setConnectError('');
+  if(!host||!dev||!user||!pass){setConnectError('กรอก Host / Device ID / Username / Password ให้ครบ');return}
+  if(!window.mqtt || typeof window.mqtt.connect!=='function'){
+    loadMqttFallback();
+    setConnectError('MQTT library ยังโหลดไม่สำเร็จบน Browser นี้ กรุณาเปิดไฟล์ผ่าน Safari/Chrome จาก HTTPS หรือรอ 2-3 วินาทีแล้วกด CONNECT อีกครั้ง');
+    return;
+  }
+  safeStorageSet('swgMobileUi',JSON.stringify({host,device:dev,user}));
+  $('deviceCaption').textContent=dev+' · Mobile Dashboard V1.4';base=`umbrella/${dev}`;
+  const url=`wss://${host}:8884/mqtt`;log('Connecting '+url);$('connectBtn').disabled=true;$('connectBtn').textContent='CONNECTING...';
+  try{
+    if(client){try{client.end(true)}catch(e){}}
+    client=window.mqtt.connect(url,{username:user,password:pass,clientId:'swg-mobile-'+Math.random().toString(16).slice(2,10),keepalive:60,reconnectPeriod:5000,clean:true,connectTimeout:20000,protocolVersion:4,resubscribe:true});
+  }catch(e){$('connectBtn').disabled=false;$('connectBtn').textContent='CONNECT';setConnectError('Connect error: '+e.message);return}
+  let first=true;
+  let rxCount=0;
+  const failTimer=setTimeout(()=>{if(first&&!client?.connected){$('connectBtn').disabled=false;$('connectBtn').textContent='CONNECT';setConnectError('เชื่อมต่อไม่สำเร็จภายใน 20 วินาที: ตรวจ Username/Password, Permission และ WSS');}},20500);
+  client.on('connect',()=>{
+    first=false;clearTimeout(failTimer);$('connectBtn').textContent='CONNECT';setConnected(true);closeModal();setConnectError('');log('Broker connected');
+    const filter=base+'/#';
+    const sd=$('subDiag');if(sd)sd.textContent='SUB: '+filter+' ...';
+    client.subscribe(filter,{qos:0},(err,granted)=>{
+      if(err){if(sd)sd.textContent='SUB ERROR: '+err.message;log('SUB ERROR '+err.message);return}
+      const q=(granted&&granted[0])?granted[0].qos:'?';if(sd)sd.textContent='SUB OK: '+filter+' (QoS '+q+')';log('SUB OK '+filter+' qos='+q);
+    });
+    // V1.2: DO NOT auto-publish PING here. First prove subscribe/RX stability.
+  });
+  client.on('reconnect',()=>{log('Reconnecting...');const d=$('brokerDiag');if(d)d.textContent='BROKER: RECONNECTING'});
+  client.on('offline',()=>{setConnected(false);log('Broker offline · last TX may have been rejected or socket lost')});
+  client.on('close',()=>{setConnected(false);log('Broker socket closed · if this happens immediately after a button press, compare with HiveMQ WebClient QoS0 publish test');if(first){$('connectBtn').disabled=false;$('connectBtn').textContent='CONNECT'}});
+  client.on('disconnect',packet=>{log('Broker DISCONNECT '+JSON.stringify(packet||{}))});
+  client.on('error',e=>{log('ERROR '+e.message);setConnectError('MQTT: '+e.message);$('connectBtn').disabled=false;$('connectBtn').textContent='CONNECT'});
+  client.on('message',(topic,payload)=>{rxCount++;const rd=$('rxDiag');if(rd)rd.textContent='RX '+rxCount+': '+topic+' · '+new Date().toLocaleTimeString();const obj=safeJson(payload.toString());if(!obj)return;if(topic.endsWith('/telemetry'))renderTelemetry(obj);else if(topic.endsWith('/status'))renderStatus(obj);else if(topic.endsWith('/trigger'))renderTrigger(obj);else if(topic.endsWith('/config/ack')){$('cfgStatus').textContent=`${obj.result} · ${obj.reason}`;log(`CONFIG ACK ${obj.result} · ${obj.reason}`)}else if(topic.endsWith('/ack'))log(`ACK ${obj.cmd}: ${obj.result} · ${obj.reason}`);else if(topic.endsWith('/config'))renderConfig(obj)});
+}
+$('settingsBtn').onclick=openModal;$('closeModalBtn').onclick=closeModal;$('connectModal').addEventListener('click',e=>{if(e.target===$('connectModal'))closeModal()});
+$('showPassBtn').onclick=e=>{e.preventDefault();const p=$('pass');p.type=p.type==='password'?'text':'password';$('showPassBtn').textContent=p.type==='password'?'SHOW':'HIDE'};
+$('connectBtn').onclick=connectCloud;$('disconnectBtn').onclick=()=>{client?.end(true);client=null;setConnected(false);log('Disconnected')};
+$('closeBtn').onclick=()=>send('CLOSE');$('openBtn').onclick=()=>send('OPEN');$('ackBtn').onclick=()=>send('ACK');$('pingBtn').onclick=()=>send('PING');$('applyCfgBtn').onclick=applyConfig;
+['cfgSens','cfgRms','cfgDef','cfgGust','cfgStrong','cfgCalm','cfgAutoClose','cfgAutoReopen'].forEach(id=>$(id).addEventListener('input',()=>{configDirty=true;if(lastConfig)renderConfig(lastConfig)}));
+$('notifyBtn').onclick=async()=>{if(!('Notification'in window)){alert('Browser นี้ไม่รองรับ Notification');return}const p=await Notification.requestPermission();log('Notification '+p)};
+$('runtimeInfo').textContent='Browser: '+navigator.userAgent.split(' ').slice(0,3).join(' ')+' · Protocol: '+location.protocol;
+if(location.protocol==='file:') setConnectError('หมายเหตุ: iPhone Files/Quick Look อาจจำกัด JavaScript/WSS แนะนำเปิด Dashboard ผ่าน HTTPS ใน Safari/Chrome');
+setConnected(false);if(!$('host').value||!$('user').value)setTimeout(openModal,300);
+</script>
+</body>
+</html>
