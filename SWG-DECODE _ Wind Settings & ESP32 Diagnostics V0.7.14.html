@@ -1,0 +1,1390 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<meta name="theme-color" content="#0b1728"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="SWG HMI"><meta name="format-detection" content="telephone=no"><link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAGC0lEQVR4Xu3dS28cRRDA8RmziEMMIeLgS+LHrglwIsSWkDgQlIs3NhJSQLwjcSAJQoiA+ByWCIE8OSAZCCDeYHt9QeIDwJWLHeJ8A86AhDITrRbvVO/2THdPd8//p5xi7zxqytVdlfUmveeBdgIUmSAskJAcELWSJCU8YFmBnhaFAxKWFbAhhT66FcjLSprSrYBuBZpYVkC3An1UDigqB/tRCBiCQcSyApID+hiCgcoBfew5oGhl6WUhoHJAUTkYgkHAEAx0K9DHngPynoN3goFuBdpYVqBoZellIaByQFE5GIJBwBAMdCvQx54D8p6DIRjoVqCNZQWKVpZeFnIr20TzH28N3/bsI7/lf3nzj4Xhr26/vtS0SKX7Dj4a9z3PXyvIgz36aTGoMEX22D4dc8bEOQSbv9Zzk/GDmbd9uuvmpM6k+w4ecXYy28rlRGHZUKwvI0WTJa2Rt+q/cjlhT/96Qs+SgIdgnaub9h6wEf0s2TlzwsgBHUsnDz3m+JTVGU+L0htSLcGlSGDLivG0cCm/+IBSJJ08dNRlgErrXN0o/doxqeccZu2cWTZ7QBsCSA4HaVEXz1MknZz2t3J0rlivFj7YOetpFUknpwtGxT7oXFn34TLc2Dm74uZEWnxMjkalxSDfUsS7f7JvbGYkiXf3nt47s6hVaqxqX/7Z6vGDcOONpz25Tl+Sg7TYw4cU8WJZITOG+RCTieydYHX+8SEKfsoiU+ejqblytC//5OeD8US98ZmoMTXrvfNQ3I5STeWjtmWlfYmaMa4sVjUkSD3LSvvSj+MGBplaIlZDctRynxFwH7f0vrnHXQZu7uIPLk8Xnz/ffMbZTTmtHGRGdS5j6DQ5EBZ33YrLlI9bFkkXzYujyjF38fu4H5hjbuLpYgjm5k6a5nZULZePOH8dsjHsftqf9WVl7qPvGvOoXLMdW+vJgXCl+ztP2Lv62Q+/tXdw5G6+ddJSKCxWDjLDDXtxtpgcCJ2tIZi9dMawLNrm+1oqB0Qty60yXLEw8rCyrMxe+MZVSHBHFnPDKwvLCkTmk2P2wtfEuxbGIx/wZ4JhmNn/5sB85UA0SA6I0vsffNJgeGY++Ep9tBvvnVJ8Q3t1rfrF2D6F58ffffv56jHMuUgOdTQlWoli+xQBHd9ochw2WjnO/69ylIvpoJEpYvsUwR1/95zBynH4mKkqlCTJzPkv86NVj+nIFLF9ikCPv3vuBVMP1MqG1GxYC1PN9ilCP74RJpMjLxvGwzpcimyfIujj94t3demBh56qfpTc9PtfWAprX3t1zfYpQtdeXbv1zotG7sJk5UBkTFaOf+66O7LoBKr1799GrpzfW4mSmTd3sKxAZPKdYCMHVt765Oj+4Wt77fe/vL1gtVvvvmTkytMDDx83cqCg/fJrwYfwHz/m44fVu8SyAhHJAXnPYfa9QzEhMlQOsKxAH0MwBTOjpHCxrEDekDb+x0PW9MLBssKywoYUJbDnAEMwfQzBqBxgCAZ9DMHoZakc0McQjCGY3K1kHySFQk2PDN0K2HNAH+8EEzEEY1kBywr00a3Qy1I5oI8hmGJHqh/OuLCskB0sK9BHKwsRQzARQzAqB9hzQB/dCt0KlQP6GIIpdqT64YwLywrZwbICfbSyEDEEEzEEo3KAPQf0RdKtbPWuD9/7UnesT3kufG2m6b0sywrkDWnMPx4Vf/Irvjx8E1nxjOBPga3N6yNvLfueAksnXh752ui/IZJlJXuWxpg9WrgiSQ7J1ubnimej/iriH4LlGdBdfmXwYfc2PlM8e8Zfd7q1qYWTijCFRf3Ix7QnjZosqmWl+nOtfoSYpFMLz8Z0P0mS9DY+LXdH3eVXy70wVlFVjly5Z1zuVXFLpxZjqxy53rpG/eiuUDMKpFOLz8Wa/r31tXFurbtyapxva6CYk6OvMEvIiZEakRwoJ/4hGEqLsFuBKSQHRJG8Eww2UDmgqByNf78TJCwrELGsgOSAPoZgoHJAH3sO0K1AH5UDisrBEAwChmCgW4E+9hyQ9xz86h8kVA6QHNBHtwIqB/RF/ZlgqIZlBSwr0EcrC9F/xngest8jdAQAAAAASUVORK5CYII=">
+<title>SWG-DECODE | Wind Settings &amp; ESP32 Diagnostics V0.7.14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* ===== SWG-DECODE HMI · Visual refresh (CSS only — logic/IDs/classes unchanged) ===== */
+:root{
+  font-family:"IBM Plex Sans Thai","Noto Sans Thai",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;background:#060d18;color:#eaf4ff;
+  --bg:#060d18;--bg2:#0a1626;
+  --panel:rgba(18,36,58,.72);--panel2:#0c1c2f;
+  --line:rgba(130,180,220,.16);--line2:rgba(130,180,220,.28);
+  --dim:#9db6ca;--text:#eaf4ff;
+  --blue:#5ec8ff;--green:#4fe0b5;--yellow:#f6c56f;--red:#ff7a88;--violet:#b9a8ff;
+  --radius:18px;--radius-sm:12px;
+  --shadow:0 10px 30px -12px rgba(0,0,0,.65),0 1px 0 rgba(255,255,255,.04) inset;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-size:16px;line-height:1.55;min-height:100vh;
+  background:
+    radial-gradient(900px 500px at 8% -10%,rgba(46,128,196,.22),transparent 60%),
+    radial-gradient(800px 480px at 105% 10%,rgba(40,180,150,.14),transparent 60%),
+    linear-gradient(180deg,#07101d 0%,#060d18 100%);
+  background-attachment:fixed;
+  padding-bottom:env(safe-area-inset-bottom)}
+button,input,select{font:inherit}
+a{color:#94dcff}
+small,.muted{color:var(--dim)}
+h1{margin:0;font-size:22px;line-height:1.2;letter-spacing:.2px;font-weight:700}
+h2{font-size:19px;margin:0 0 12px;font-weight:700;letter-spacing:.2px}
+h3{font-size:15px;margin:2px 0 10px;font-weight:650;color:#d8ecfb;letter-spacing:.3px}
+p{margin:8px 0 12px}
+code{font-family:var(--mono);font-size:.9em;background:rgba(94,200,255,.1);border:1px solid rgba(94,200,255,.2);padding:1px 6px;border-radius:6px}
+.sub{font-size:13px}
+
+/* ---------- Buttons ---------- */
+button{cursor:pointer;padding:11px 17px;min-height:46px;border-radius:12px;
+  background:linear-gradient(180deg,#1d4466,#16354f);color:#f4faff;
+  border:1px solid rgba(130,190,235,.35);font-weight:600;letter-spacing:.2px;
+  box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 4px 12px -6px rgba(0,0,0,.6);
+  transition:transform .12s ease,filter .15s ease,box-shadow .15s ease,border-color .15s ease;
+  -webkit-tap-highlight-color:transparent}
+button:hover:not(:disabled){filter:brightness(1.12);border-color:rgba(160,215,250,.6)}
+button:active:not(:disabled){transform:translateY(1px) scale(.99)}
+button:focus-visible,input:focus-visible,summary:focus-visible,select:focus-visible{outline:3px solid #9bdfff;outline-offset:2px}
+button:disabled{opacity:.42;cursor:not-allowed;filter:saturate(.5)}
+button.primary{background:linear-gradient(180deg,#15836f,#0f6455);border-color:#46c9a3}
+button.danger{background:linear-gradient(180deg,#8a3a49,#6c2a37);border-color:#e08390}
+button.secondary{background:#15334d}
+button.ghost{background:transparent;border-color:rgba(130,180,220,.35);box-shadow:none}
+
+/* ---------- Header / Nav ---------- */
+header{position:sticky;top:0;z-index:10;
+  background:rgba(8,18,32,.78);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);
+  border-bottom:1px solid var(--line);
+  padding-top:env(safe-area-inset-top)}
+.top{max-width:1160px;margin:auto;padding:14px 18px 12px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand h1{display:flex;align-items:center;gap:8px}
+.brand small{display:block;font-size:12px;margin-top:3px;color:#8fb0c8;letter-spacing:.2px}
+.connect{display:flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:flex-end}
+.connect button{min-height:40px;padding:8px 14px;font-size:14px}
+.status{font-size:11.5px;font-weight:650;letter-spacing:.5px;padding:6px 11px 6px 22px;position:relative;
+  border:1px solid rgba(246,197,111,.45);border-radius:100px;color:#ffe2a6;background:rgba(246,197,111,.12);white-space:nowrap}
+.status::before{content:"";position:absolute;left:9px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 3px rgba(246,197,111,.18)}
+.status.ok{background:rgba(79,224,181,.12);border-color:rgba(79,224,181,.5);color:#c9ffec}
+.status.ok::before{background:var(--green);box-shadow:0 0 0 3px rgba(79,224,181,.2),0 0 10px var(--green)}
+nav{max-width:1160px;margin:auto;padding:0 16px 12px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+nav button{min-height:40px;padding:8px;font-size:14px;border-radius:11px;
+  background:rgba(255,255,255,.03);border:1px solid var(--line);box-shadow:none;color:#bcd3e4;font-weight:600}
+nav button.selected{background:linear-gradient(180deg,rgba(94,200,255,.26),rgba(94,200,255,.12));
+  border-color:rgba(94,200,255,.6);color:#fff;box-shadow:0 0 0 1px rgba(94,200,255,.15) inset,0 6px 18px -10px rgba(94,200,255,.8)}
+
+/* ---------- Layout ---------- */
+main{max-width:1160px;margin:auto;padding:22px 16px 70px}
+main [data-page][hidden]{display:none!important}
+.page-title{font-size:26px;margin:0 0 4px;letter-spacing:.2px}
+.page-intro{color:var(--dim);margin:0 0 16px;font-size:14.5px}
+.panel{background:linear-gradient(165deg,rgba(24,46,72,.78),rgba(13,28,46,.78));
+  border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin:14px 0 18px;
+  box-shadow:var(--shadow)}
+.panel>h2{display:flex;align-items:center;gap:10px}
+.panel>h2::before{content:"";width:4px;height:18px;border-radius:3px;background:linear-gradient(180deg,var(--blue),var(--green))}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.card{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(12,30,49,.95),rgba(9,22,37,.95));
+  border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--blue),transparent 80%);opacity:.7}
+.card small{display:block;font-size:12px;color:#97b7cc;letter-spacing:.3px}
+.card strong{display:block;font-size:26px;margin-top:4px;overflow-wrap:anywhere;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.2px}
+.card strong small{display:inline;font-size:12px;font-weight:600;color:#8eb0c6}
+.card.compact strong{font-size:16.5px;font-weight:650}
+.card.compact::before{background:linear-gradient(90deg,var(--green),transparent 70%);opacity:.5}
+.graphs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.graph{display:block;width:100%;height:175px;background:linear-gradient(180deg,#0b1d2e,#081726);border-radius:12px;border:1px solid rgba(130,180,220,.12)}
+
+/* ---------- Notices / Toast ---------- */
+.notice{padding:12px 14px 12px 16px;background:rgba(246,197,111,.09);border:1px solid rgba(246,197,111,.38);
+  border-left:4px solid var(--yellow);border-radius:12px;color:#ffe0ae;margin:12px 0;font-size:14.5px}
+.notice:empty{display:none}
+.notice.safe{background:rgba(79,224,181,.09);border-color:rgba(79,224,181,.38);border-left-color:var(--green);color:#cffbea}
+.notice.info{background:rgba(94,200,255,.08);border-color:rgba(94,200,255,.32);border-left-color:var(--blue);color:#cdeaff}
+.notice.error{background:rgba(255,122,136,.1);border-color:rgba(255,122,136,.4);border-left-color:var(--red);color:#ffd4d8}
+.toast{display:none;background:rgba(20,44,68,.92);border:1px solid var(--line2);border-radius:14px;padding:12px 16px;margin:12px 0;box-shadow:var(--shadow)}
+.toast.show{display:block}
+.toast.ok{border-color:rgba(79,224,181,.6);color:#c8f7e4}
+.toast.error{border-color:rgba(255,122,136,.6);color:#ffdbd7}
+
+/* ---------- Control page ---------- */
+.steps{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.steps button{flex:1 1 180px}
+.mode-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.mode-choice{display:flex;gap:12px;align-items:flex-start;background:rgba(9,24,40,.9);border:1.5px solid var(--line2);
+  border-radius:16px;padding:16px;cursor:pointer;transition:border-color .15s,background .15s,box-shadow .15s}
+.mode-choice:hover{border-color:rgba(94,200,255,.5)}
+.mode-choice.chosen,.mode-choice:has(input:checked){border-color:#7bd4ef;background:linear-gradient(180deg,rgba(94,200,255,.18),rgba(94,200,255,.06));box-shadow:0 0 0 3px rgba(94,200,255,.12)}
+.mode-choice input{accent-color:#8bd7ef;width:21px;height:21px;margin:4px 0 0;flex:none}
+.mode-choice strong{display:block;font-size:18px;letter-spacing:.6px}
+.mode-choice small{display:block;font-size:13px;margin-top:4px;line-height:1.5}
+.mode-choice.emergency{border-color:rgba(237,176,122,.45)}
+.mode-choice.emergency.chosen,.mode-choice.emergency:has(input:checked){background:linear-gradient(180deg,rgba(237,140,90,.2),rgba(237,140,90,.06));border-color:#edb07a;box-shadow:0 0 0 3px rgba(237,176,122,.14)}
+#applyMode{width:100%;max-width:340px}
+.actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}
+.actions button{font-size:21px;min-height:78px;border-radius:16px;letter-spacing:1.5px;font-weight:700;
+  box-shadow:0 1px 0 rgba(255,255,255,.12) inset,0 10px 24px -12px rgba(0,0,0,.8)}
+.actions .open{background:linear-gradient(180deg,#169079,#0e6556);border-color:#4cc9a6}
+.actions .stop{background:linear-gradient(180deg,#a5404f,#7b2c3a);border-color:#ec8a99}
+.actions .close{background:linear-gradient(180deg,#2068a6,#164c7c);border-color:#78b6e6}
+.access-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,1fr);gap:16px;margin-top:6px}
+.access-layout button{width:100%;margin-top:10px}
+.hold-progress{padding:12px 14px;border-radius:12px;border:1px solid rgba(237,176,122,.55);background:rgba(237,140,90,.12);margin:10px 0}
+.hold-track{height:10px;background:rgba(0,0,0,.35);border-radius:10px;overflow:hidden;margin-top:8px}
+#holdBar{width:0;height:100%;background:linear-gradient(90deg,#ffd27a,#ff9e76);border-radius:10px;box-shadow:0 0 12px rgba(255,190,120,.6)}
+.state-line{font-weight:600;color:#d8ecfb}
+
+/* ---------- Forms ---------- */
+input:not([type=checkbox]):not([type=radio]),select{background:rgba(4,14,26,.85);border:1px solid rgba(130,180,220,.3);border-radius:10px;
+  color:#f2f9ff;width:100%;padding:12px;min-height:46px;transition:border-color .15s,box-shadow .15s}
+input:not([type=checkbox]):not([type=radio]):focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(94,200,255,.18);outline:none}
+input:disabled{opacity:.75}
+input::placeholder{color:#6f8ba1}
+label{display:block;color:#d2e5f3}
+label>small{display:block;margin-top:4px}
+.field-label{margin:6px 0;font-size:14px;font-weight:600}
+#cloudAdminKey{letter-spacing:.05em}
+.cloud-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 16px;padding:6px 0 16px}
+.cloud-config-field{display:flex;flex-direction:column;gap:7px;color:#cfe3f3;font-size:13.5px;font-weight:500;
+  background:rgba(8,22,37,.6);border:1px solid var(--line);border-radius:12px;padding:12px}
+.cloud-config-field input[type=checkbox]{width:22px;height:22px;accent-color:#6fe0c3}
+.cloud-days{display:flex;flex-wrap:wrap;gap:6px}
+.cloud-days label{padding:7px 10px;background:rgba(94,200,255,.06);border:1px solid var(--line2);border-radius:9px;white-space:nowrap;font-size:13px;display:inline-flex;align-items:center;gap:4px}
+.cloud-days label:has(input:checked){background:rgba(79,224,181,.14);border-color:rgba(79,224,181,.55)}
+.cloud-actions{display:flex;flex-wrap:wrap;gap:10px;padding-top:14px;border-top:1px solid var(--line)}
+.cloud-actions button{flex:0 1 auto}
+
+/* ---------- Settings accordion ---------- */
+.settings-list{padding:6px 20px}
+.settings-list details{padding:0 0 4px;border-top:1px solid var(--line)}
+.settings-list details:first-of-type{border-top:0}
+.settings-list summary{padding:17px 30px 17px 0;font-size:17px;font-weight:700;cursor:pointer;color:#ecf7ff;list-style:none;position:relative}
+.settings-list summary::-webkit-details-marker{display:none}
+.settings-list summary::after{content:"";position:absolute;right:6px;top:50%;width:9px;height:9px;margin-top:-7px;
+  border-right:2px solid #84d4f4;border-bottom:2px solid #84d4f4;transform:rotate(45deg);transition:transform .2s}
+.settings-list details[open]>summary::after{transform:rotate(-135deg);margin-top:-2px}
+.settings-list details[open]>summary{color:#9fe0ff}
+.settings-list .help{font-size:13.5px;color:#b3cbdc;max-width:780px;margin-top:0}
+.settings-list details:not([open]) summary{margin:0}
+.help{font-size:14px;color:#b3cbdc}
+.mini{font-size:13px;color:#b5cfe0}
+#cfgStatus,#cfgAck,#cfgView{font-size:13.5px;overflow-wrap:anywhere}
+#cfgStatus,#settingsResult{font-family:var(--mono);font-size:12.5px}
+
+/* ---------- Diagnostics ---------- */
+pre{font-family:var(--mono);font-size:12px;white-space:pre-wrap;word-break:break-word;max-height:260px;overflow:auto;margin:0;
+  background:#050e1a;border:1px solid var(--line);border-radius:12px;padding:12px;color:#bfe0f2}
+#swgDiagRows{gap:0!important;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(5,14,26,.6)}
+#swgDiagRows>div{padding:9px 12px!important;border-bottom:1px solid var(--line)!important;font-size:13.5px;align-items:center!important}
+#swgDiagRows>div:last-child{border-bottom:0!important}
+#swgDiagRows>div:nth-child(even){background:rgba(255,255,255,.02)}
+#swgDiagRows>div>b{letter-spacing:.4px;font-family:var(--mono);font-size:11.5px!important}
+
+/* ---------- Modal ---------- */
+.sheet{position:fixed;inset:0;background:rgba(2,8,16,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);z-index:30;display:none;align-items:center;justify-content:center;padding:16px}
+.sheet.open{display:flex}
+.inner{width:min(560px,100%);background:linear-gradient(170deg,#16304a,#0e2135);padding:24px;border-radius:22px;max-height:90vh;overflow-y:auto;
+  border:1px solid var(--line2);box-shadow:0 30px 70px -20px rgba(0,0,0,.85)}
+.inner label{font-size:13.5px;margin-top:13px;margin-bottom:5px;font-weight:600}
+.form-actions{display:flex;gap:10px;margin-top:18px}
+.form-actions button{flex:1}
+footer{font-size:12px;color:#7f9db3;text-align:center;padding:28px 10px;border-top:1px solid var(--line);margin-top:20px}
+.hidden-support{display:none}
+.nowrap{white-space:nowrap}
+
+/* ---------- Graph panels ---------- */
+.graph{height:280px}
+.graph-panel{min-width:0;margin-bottom:0}
+.graph-panel>h3{display:flex;align-items:center;gap:8px}
+.graph-panel>h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 8px var(--blue)}
+.graph-legend{display:flex;gap:6px 12px;flex-wrap:wrap;font-size:12px;color:#c3dcec;padding:9px 0 2px}
+.graph-legend span{display:inline-flex;align-items:center;gap:6px}
+.graph-legend i{width:17px;height:3px;display:inline-block;background:var(--c);border-radius:2px}
+.graph-legend .dashed i{background:repeating-linear-gradient(90deg,var(--c) 0 5px,transparent 5px 9px)}
+.graph-edit{margin-top:12px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:rgba(5,16,28,.55)}
+.graph-edit summary{cursor:pointer;font-weight:600;color:#d9efff;font-size:14px}
+.graph-checks{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;color:#d4e9f7;font-size:13px}
+.graph-checks label{display:inline-flex;align-items:center;gap:6px}
+.graph-checks input{accent-color:#66cbdf;width:18px;height:18px}
+.graph-limits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:8px}
+.graph-limits label{font-size:12px;color:#c1d8e8}
+.graph-limits input{margin-top:4px;min-width:0;padding:8px!important;min-height:40px!important;font-family:var(--mono)}
+.graph-foot{font-size:12px;color:#adc6d8;line-height:1.6;margin:8px 0 0}
+.graph-reed-status{font-size:12px;min-height:23px;padding:6px 10px;margin:6px 0 0;color:#cde4ee;font-family:var(--mono);
+  background:rgba(5,16,28,.55);border:1px solid var(--line);border-radius:9px}
+.graph-info{background:rgba(94,200,255,.07);border:1px solid rgba(94,200,255,.25);border-left:3px solid #68c6db;padding:10px 12px;border-radius:10px;margin:12px 0;font-size:13px;color:#cde4f3}
+
+/* ---------- Responsive (Safari iPhone first) ---------- */
+@media(max-width:480px){.graph{height:255px}.graph-limits{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.graph-limits input{padding:7px!important;font-size:14px!important}}
+@media(max-width:770px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.graphs{grid-template-columns:1fr}.mode-grid{grid-template-columns:1fr}.access-layout{grid-template-columns:1fr}.top{padding:12px}.panel{padding:16px}.settings-list{padding:4px 16px}.cloud-grid{grid-template-columns:1fr}.actions button{min-height:66px;font-size:18px}#applyMode{max-width:none}}
+@media(max-width:440px){main{padding:12px 10px 50px}h1{font-size:19px}.page-title{font-size:22px}.card{padding:11px 12px}.card strong{font-size:21px}.connect .status{font-size:10px;padding-left:19px}.connect .status::before{left:7px}.grid{gap:8px}.top{align-items:flex-start}.connect{gap:6px}nav{padding:0 9px 9px;gap:4px}nav button{padding:6px 2px;font-size:13px}.actions{gap:7px}.actions button{padding:8px;font-size:16px;letter-spacing:.8px}.panel{border-radius:16px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* ===== HMI v1.3 · HUD layer (visual only) ===== */
+.connect button{white-space:nowrap}
+@media(max-width:440px){.connect button{padding:8px 10px;font-size:13px}}
+body::before{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(35% 30% at 20% 25%,rgba(47,183,232,.16),transparent 70%),
+    radial-gradient(30% 28% at 80% 30%,rgba(79,224,181,.11),transparent 70%),
+    radial-gradient(40% 35% at 50% 90%,rgba(120,90,255,.08),transparent 70%);
+  animation:aurora 28s ease-in-out infinite alternate;will-change:transform}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(rgba(120,180,230,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(120,180,230,.045) 1px,transparent 1px);
+  background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse at 50% 20%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse at 50% 20%,#000 30%,transparent 80%)}
+@keyframes aurora{0%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(3%,-2%,0) rotate(4deg)}100%{transform:translate3d(-3%,2%,0) rotate(-3deg)}}
+header::after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:30%;
+  background:linear-gradient(90deg,transparent,#5ec8ff,#4fe0b5,transparent);animation:scan 6s linear infinite}
+@keyframes scan{0%{transform:translateX(-100%)}100%{transform:translateX(430%)}}
+.brand h1{text-shadow:0 0 18px rgba(94,200,255,.35)}
+.status.ok::before{animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(79,224,181,.2),0 0 6px #4fe0b5}50%{box-shadow:0 0 0 6px rgba(79,224,181,.05),0 0 14px #4fe0b5}}
+
+/* HUD corner brackets on panels */
+.panel{position:relative}
+.panel::after{content:"";position:absolute;inset:-1px;border-radius:inherit;pointer-events:none;
+  background:
+    linear-gradient(#5ec8ff,#5ec8ff) top left/18px 2px no-repeat,
+    linear-gradient(#5ec8ff,#5ec8ff) top left/2px 18px no-repeat,
+    linear-gradient(#4fe0b5,#4fe0b5) bottom right/18px 2px no-repeat,
+    linear-gradient(#4fe0b5,#4fe0b5) bottom right/2px 18px no-repeat;opacity:.55}
+.settings-list.panel::after{opacity:.35}
+.card{transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+@media(hover:hover){.card:hover{transform:translateY(-2px);border-color:rgba(94,200,255,.35);box-shadow:0 12px 28px -16px rgba(94,200,255,.45)}}
+.graph{box-shadow:0 0 0 1px rgba(94,200,255,.06),0 0 30px -12px rgba(94,200,255,.25) inset;cursor:crosshair}
+
+/* Gauge cards */
+.hud-card{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr;column-gap:8px;align-items:center;min-height:104px}
+.hud-card>small{grid-column:1;grid-row:1}
+.hud-card>strong{grid-column:1;grid-row:2;align-self:start}
+.hud-card>svg{grid-column:2;grid-row:1/3;width:76px;height:76px}
+.hud-gauge .hg-track{fill:none;stroke:rgba(140,190,225,.13);stroke-width:8;stroke-linecap:round}
+.hud-gauge .hg-val{fill:none;stroke-width:8;stroke-linecap:round;transition:stroke-dasharray .6s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 0 4px rgba(94,200,255,.55))}
+.hud-gauge .hg-pct{font:700 15px "IBM Plex Mono",ui-monospace,monospace;fill:#dff3ff}
+.hud-gauge[data-state=warn] .hg-val{stroke:#ffb36e!important;filter:drop-shadow(0 0 5px rgba(255,170,100,.7))}
+.hud-gauge[data-state=crit] .hg-val{stroke:#ff657a!important;filter:drop-shadow(0 0 6px rgba(255,101,122,.85));animation:critblink 1s steps(2) infinite}
+.hud-gauge[data-state=warn] .hg-pct{fill:#ffcf9a}.hud-gauge[data-state=crit] .hg-pct{fill:#ff9aa6}
+.hud-gauge[data-state=idle] .hg-pct{fill:#5f7d93}
+.hud-gauge.stale{opacity:.5;filter:grayscale(.7)}
+@keyframes critblink{50%{opacity:.55}}
+.hud-umb path{fill:#2c4a63;transition:fill .3s,opacity .3s}
+.hud-umb .u-rib{fill:none;stroke:rgba(6,18,32,.55);stroke-width:2}
+.hud-umb .u-stem{fill:none!important;stroke:#7c97ad;stroke-width:4;stroke-linecap:round}
+.hud-umb .u-open,.hud-umb .u-closed{transition:opacity .35s,transform .35s;transform-origin:50% 40%}
+.hud-umb .u-closed{opacity:0;transform:scaleX(.4)}
+.hud-umb[data-state=open] .u-open path:first-child{fill:#2fb7e8;filter:drop-shadow(0 0 6px rgba(47,183,232,.7))}
+.hud-umb[data-state=closed] .u-open{opacity:0;transform:scaleX(.3)}
+.hud-umb[data-state=closed] .u-closed{opacity:1;transform:none}
+.hud-umb[data-state=closed] .u-closed path{fill:#b9a8ff;filter:drop-shadow(0 0 6px rgba(185,168,255,.6))}
+.hud-umb[data-state=unknown] .u-open{opacity:.45}
+.hud-umb.stale{opacity:.5}
+
+/* Diagnostics readiness */
+.hud-ready{display:flex;align-items:center;gap:16px;margin:10px 0 4px;padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(5,14,26,.55)}
+.hud-ready .ready-ring{width:96px;height:96px;flex:none}
+.hud-ready .ready-ring .hg-pct{font-size:16px}
+.ready-info strong{display:block;font-size:15px;margin-bottom:8px;letter-spacing:.3px}
+.ready-chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:600 11px "IBM Plex Mono",ui-monospace,monospace;padding:4px 9px;border-radius:999px;border:1px solid currentColor;background:rgba(255,255,255,.03)}
+.chip-pass{color:#68dfb7}.chip-pending,.chip-no-data,.chip-observe,.chip-manual-test{color:#ffcc72}.chip-fault,.chip-stale{color:#ff8991}.chip-info,.chip-rf-off{color:#9bbde0}
+
+@media(max-width:440px){.hud-card{min-height:92px}.hud-card>svg{width:58px;height:58px}.hud-card{grid-template-columns:minmax(0,1fr) auto;column-gap:4px}.hud-ready .ready-ring{width:78px;height:78px}}
+@media(prefers-reduced-motion:reduce){body::before,header::after,.status.ok::before,.hud-gauge[data-state=crit] .hg-val{animation:none!important}}
+
+/* ===== Mobile hardening (visual/UX only) ===== */
+html,body{overscroll-behavior-y:none}
+button,nav button,summary,label,.mode-choice{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+@media(max-width:770px){
+  input:not([type=checkbox]):not([type=radio]),select,textarea{font-size:16px!important} /* stop iOS auto-zoom on focus */
+  .graph-limits input{font-size:16px!important}
+  main{padding-left:max(10px,env(safe-area-inset-left));padding-right:max(10px,env(safe-area-inset-right))}
+  .sheet{align-items:flex-end;padding:0}
+  .sheet .inner{border-radius:22px 22px 0 0;max-height:92vh;padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+  .cloud-actions button{flex:1 1 140px}
+  pre{max-height:200px}
+}
+@media(display-mode:standalone){header{padding-top:max(8px,env(safe-area-inset-top))}}
+</style>
+
+<header><div class="top"><div class="brand"><h1>☂ SWG-DECODE</h1><small>ระบบตรวจวัดและควบคุมจำลอง · Cloud HMI v1.3 · HUD Graph Diagnostics</small></div><div class="connect"><span class="status" id="brokerStatus">ยังไม่เชื่อมต่อ</span><button id="openSettings" type="button">เชื่อมต่อ Cloud ⚙</button></div></div>
+<nav aria-label="เมนูหลัก"><button type="button" data-nav="overview" class="selected">ภาพรวม</button><button type="button" data-nav="control">ควบคุม</button><button type="button" data-nav="settings">ตั้งค่า</button><button type="button" data-nav="diagnostics">ตรวจสอบ</button></nav></header>
+<main><div id="hmiToast" class="toast" aria-live="polite"></div>
+<section data-page="overview"><h2 class="page-title">ภาพรวมระบบ</h2><p class="page-intro">ค่าจาก ESP32 ตามเวลาจริง · ไม่มีการจำลองตัวเลขบนหน้าจอ</p>
+<div class="panel"><div class="grid"><div class="card"><small>ความเร็วลม</small><strong><span id="rpm">--</span> <small>RPM</small></strong></div><div class="card"><small>ลมกระโชก</small><strong><span id="gust">--</span> <small>RPM</small></strong></div><div class="card"><small>อุณหภูมิภายนอก</small><strong><span id="temp">--</span> <small>°C</small></strong></div><div class="card"><small>ตำแหน่งร่ม</small><strong id="roof">--</strong></div></div></div>
+<div class="notice" id="preRfBanner" role="status">PRE-RF DIAGNOSTICS: รอค่าจริงจาก ESP32</div><div class="graph-info"><strong>กราฟวิเคราะห์จาก ESP32</strong> — ทุกเส้น Limit อ่านค่าจริงจาก Firmware เท่านั้น; หากยังไม่ตั้งค่า จะแสดง NOT CONFIGURED ไม่วาดค่าจำลอง</div>
+<div class="graphs">
+  <div class="panel graph-panel"><h3>ความเร็วลม · Wind RPM / Gust</h3>
+    <canvas id="windGraph" class="graph" role="img" aria-label="กราฟ Wind RPM พร้อมเส้น limit และ Reed OPEN CLOSED square wave"></canvas>
+    <div class="graph-legend"><span style="--c:#67d5d7"><i></i>RPM</span><span style="--c:#f4c27a"><i></i>Gust</span><span class="dashed" style="--c:#f2de82"><i></i>Reserved</span><span class="dashed" style="--c:#ff9e76"><i></i>Warning</span><span class="dashed" style="--c:#ff657a"><i></i>Critical</span></div>
+    <div class="graph-legend"><span style="--c:#55d6a9"><i></i>Reed OPEN</span><span style="--c:#bdacff"><i></i>Reed CLOSED</span><span>ON=1 / OFF=0</span></div>
+    <p class="graph-foot" id="windConfigState">Wind Limits: รอ Telemetry จาก ESP32</p><p class="graph-reed-status" id="windReedState">Reed: รอสถานะจาก ESP32</p>
+    <details class="graph-edit"><summary>เส้นเกณฑ์และการแสดงผลกราฟลม</summary>
+      <div class="graph-checks"><label><input type="checkbox" data-gopt="wind.limits" checked> เส้น Limit ที่ ESP32 ยืนยัน</label><label><input type="checkbox" data-gopt="wind.reed" checked> Reed Square Wave</label><label><input type="checkbox" data-gopt="wind.gust" checked> Gust</label></div>
+      <div class="graph-limits"><label>Reserved (RPM)<input type="number" step="any" min="0" data-glimit="wind.lsl" disabled title="Read-only: ESP32 confirmed values" placeholder="ยังไม่กำหนด"></label><label>Warning (RPM)<input type="number" step="any" min="0" data-glimit="wind.usl" disabled title="Read-only: ESP32 confirmed values" placeholder="ยังไม่กำหนด"></label><label>Critical (RPM)<input type="number" step="any" min="0" data-glimit="wind.emergency" disabled title="Read-only: ESP32 confirmed values" placeholder="ยังไม่กำหนด"></label></div>
+      <p class="graph-foot">อ่าน Wind Limits จาก ESP32 เท่านั้น • เมื่อ Wind Calibration/Approval ยังไม่ผ่านจะแสดง NOT CONFIGURED • ไม่มีปุ่มอนุมัติ RF ในหน้านี้</p>
+    </details>
+  </div>
+  <div class="panel graph-panel"><h3>อุณหภูมิ · Temperature °C</h3>
+    <canvas id="tempGraph" class="graph" role="img" aria-label="กราฟ Temperature พร้อมเส้น limit และ Reed OPEN CLOSED square wave"></canvas>
+    <div class="graph-legend"><span style="--c:#67d5d7"><i></i>Temp</span><span class="dashed" style="--c:#f2de82"><i></i>CLOSE</span><span class="dashed" style="--c:#ff9e76"><i></i>OPEN</span><span class="dashed" style="--c:#ff657a"><i></i>Reserved</span></div>
+    <div class="graph-legend"><span style="--c:#55d6a9"><i></i>Reed OPEN</span><span style="--c:#bdacff"><i></i>Reed CLOSED</span><span>ON=1 / OFF=0</span></div>
+    <p class="graph-foot" id="tempConfigState">Temperature Limits: รอ Telemetry จาก ESP32</p><p class="graph-reed-status" id="tempReedState">Reed: รอสถานะจาก ESP32</p>
+    <details class="graph-edit"><summary>เส้นเกณฑ์และการแสดงผลกราฟอุณหภูมิ</summary>
+      <div class="graph-checks"><label><input type="checkbox" data-gopt="temp.limits" checked> เส้น Limit ที่ ESP32 ยืนยัน</label><label><input type="checkbox" data-gopt="temp.reed" checked> Reed Square Wave</label></div>
+      <div class="graph-limits"><label>CLOSE (°C)<input type="number" step="any" min="-55" max="125" data-glimit="temp.lsl" disabled title="Read-only: ESP32 confirmed values" placeholder="ยังไม่กำหนด"></label><label>OPEN (°C)<input type="number" step="any" min="-55" max="125" data-glimit="temp.usl" disabled title="Read-only: ESP32 confirmed values" placeholder="ยังไม่กำหนด"></label><label>Reserved (°C)<input type="number" step="any" min="-55" max="125" data-glimit="temp.emergency" disabled title="Read-only: ESP32 confirmed values" placeholder="ยังไม่กำหนด"></label></div>
+      <p class="graph-foot">อ่านค่า Temperature OPEN/CLOSE จริงจาก ESP32 · ตั้งค่าได้ที่แท็บ ตั้งค่า > ตารางเวลา/อุณหภูมิ แล้วรอ ACK จาก Firmware</p>
+    </details>
+  </div>
+</div>
+<div class="panel"><h2>สถานะที่ต้องรู้</h2><div class="grid"><div class="card compact"><small>การเชื่อมต่อ</small><strong id="connectionSummary">รอเชื่อมต่อ</strong></div><div class="card compact"><small>โหมดปัจจุบัน</small><strong id="controlMode">--</strong></div><div class="card compact"><small>เงื่อนไขลม</small><strong id="quickWind">--</strong></div><div class="card compact"><small>ตำแหน่งร่ม</small><strong id="quickPos">--</strong></div></div><div class="steps"><button data-goto="control" class="primary" type="button">ไปหน้าควบคุม</button><button data-goto="settings" type="button">ไปหน้าตั้งค่า</button></div></div></section>
+<section data-page="control" hidden><h2 class="page-title">ควบคุมร่ม</h2><p class="page-intro">เลือกโหมดก่อนสั่ง · คำสั่งทั้งหมดเป็นการจำลอง RF/Motor ยังปิดอยู่</p>
+<div class="notice safe">สถานะการทำงาน: <strong>SIMULATION / MONITOR ONLY</strong> — การกด OPEN/CLOSE/STOP ยังไม่ทำให้ร่มเคลื่อนที่จริง</div>
+<div class="panel"><h2>1. เลือกโหมดการทำงาน</h2><p class="mini">โหมดปัจจุบันจาก ESP32: <strong id="currentMode">กำลังอ่าน...</strong></p><div class="mode-grid" role="radiogroup" aria-label="เลือกโหมดการทำงาน">
+<label class="mode-choice"><input type="radio" name="operatorMode" value="AUTO"><span><strong>AUTO</strong><small>ระบบตัดสินใจตามเวลา อุณหภูมิ ลม และ Safety (จำลองเท่านั้น)</small></span></label>
+<label class="mode-choice"><input type="radio" name="operatorMode" value="MANUAL"><span><strong>MANUAL</strong><small>ผู้ใช้กด OPEN / STOP / CLOSE โดยยังตรวจเงื่อนไข Safety</small></span></label>
+<label class="mode-choice emergency"><input type="radio" name="operatorMode" value="EMERGENCY"><span><strong>EMERGENCY</strong><small>ใช้ทดสอบกรณีพิเศษ · ต้องอนุญาตและกดค้าง 3 วินาที</small></span></label></div>
+<p class="mini" id="modeSelectionMessage">กำลังรอข้อมูล...</p><div class="notice" id="emergencyTip" hidden>โหมด EMERGENCY สำหรับ <strong>จำลองคำสั่งเท่านั้น</strong> ข้ามเงื่อนไขลม / Schedule / Reed เฉพาะระดับ Intent; ห้ามนำไปใช้ข้ามระบบป้องกันของอุปกรณ์จริง</div>
+<button id="applyMode" class="primary" type="button" disabled>ยืนยันเปลี่ยนโหมด</button><p id="controlResult" class="state-line" role="status" aria-live="polite">ยังไม่มีคำสั่งเปลี่ยนโหมด</p><p id="controlAck" class="mini">Last Cloud Config ACK: --</p></div>
+<div class="panel"><h2>2. ส่งคำสั่งจำลอง</h2><div class="grid"><div class="card compact"><small>โหมดที่ ESP32 ยืนยัน</small><strong id="mode">--</strong></div><div class="card compact"><small>Wind Safety</small><strong id="safety">--</strong></div><div class="card compact"><small>Schedule</small><strong id="schedule">--</strong></div><div class="card compact"><small>Cloud Manual</small><strong id="remote">--</strong></div></div>
+<p class="mini" id="safetyHelp">ตรวจเงื่อนไขจาก ESP32</p><div class="actions"><button class="open" id="openBtn" disabled>OPEN</button><button class="stop" id="stopBtn" disabled>STOP</button><button class="close" id="closeBtn" disabled>CLOSE</button></div>
+<div id="holdProgressWrap" class="hold-progress" hidden><strong id="holdProgressText">กดค้าง 3 วินาที</strong><div class="hold-track"><div id="holdBar"></div></div></div><p id="normalInstructions" class="mini">MANUAL: บางคำสั่งอาจไม่อนุญาต หาก Wind/Schedule/Safety ยังไม่พร้อม</p><div id="emergencyInstructions" class="notice" hidden><strong>EMERGENCY:</strong> กด OPEN หรือ CLOSE ค้าง 3 วินาทีต่อเนื่อง หากยกนิ้วก่อน ระบบยกเลิกคำสั่ง <strong>RF/Motor OFF</strong></div>
+<p id="notice" class="notice info" role="status">รอเชื่อมต่อ HiveMQ</p></div>
+<div class="panel"><h2>3. สิทธิ์การใช้งาน Cloud</h2><p>สำหรับการเริ่มใช้ครั้งแรก หรือเมื่อต้องการอนุญาต Emergency จำลองเท่านั้น</p><div class="grid"><div class="card compact"><small>สิทธิ์ Remote Manual</small><strong id="remoteStatus">ตรวจสอบ...</strong></div><div class="card compact"><small>สิทธิ์ Emergency</small><strong id="emergencyStatus">ตรวจสอบ...</strong></div></div>
+<div class="access-layout"><div><label class="field-label" for="cloudAdminKey">Cloud Admin Key</label><input id="cloudAdminKey" type="password" autocomplete="off" placeholder="รหัส 8–96 ตัวอักษรใน Firmware"><small>ไม่ใช่รหัส Wi-Fi / Google Sheets / HiveMQ และไม่บันทึกลงเครื่องอัตโนมัติ</small></div><div><button id="enableCloudManual" class="primary" type="button">เปิดสิทธิ์ควบคุม Cloud (ไม่เปลี่ยนโหมด)</button><button id="armEmergency" type="button">อนุญาต Emergency จำลอง</button><p id="controlAccessHelp" class="mini">เชื่อมต่อ Cloud ก่อน</p></div></div>
+<p class="mini" id="cfgArmed">รอข้อมูลสิทธิ์จาก ESP32</p><p class="mini" id="emergencyGate">รอข้อมูลสิทธิ์ Emergency</p></div></section>
+<section data-page="settings" hidden id="cloud-settings"><h2 class="page-title">ตั้งค่าระบบ</h2><p class="page-intro">แต่ละหมวดแยกจากกัน · กดบันทึกแล้วแก้เฉพาะค่าที่เปลี่ยนของหมวดนั้น</p>
+<div class="notice info">เมื่อเปิดหมวดเป็นครั้งแรก ให้กด <strong>อ่านค่าจาก ESP32</strong> ก่อนแก้ไข การบันทึกเป็นรายค่าและต้องได้รับ ACK; หากเกิดข้อผิดพลาดกลางทาง บางค่าอาจบันทึกแล้ว ให้กดอ่านซ้ำเพื่อตรวจสอบ</div>
+<div class="panel"><div class="steps"><button id="readAll" class="primary" type="button">อ่านค่าทุกหมวดจาก ESP32</button><button id="readCloudKey" type="button">อ่านด้วย Admin Key (กรอกในหน้า “ควบคุม”)</button></div>
+<p id="cfgView" class="mini">ยังไม่อ่านข้อมูล</p><p id="cfgAck" class="mini">Last Cloud Config ACK: --</p><p id="cfgStatus" class="mini">รอเชื่อมต่อ</p><p id="settingsResult" class="mini" role="status">ยังไม่มีการบันทึก</p></div>
+<div class="panel settings-list">
+<details open><summary>1. ตารางเวลา / อุณหภูมิ / Hysteresis</summary><p class="help">เลือกวันจันทร์–อาทิตย์อิสระ และเวลาแบบนาฬิกา · ค่าช่วงเปิด/ปิดอุณหภูมิควรรอผลจาก Logging ก่อน ไม่ต้องเดาตัวเลข</p><div id="cfg_schedule" class="cloud-grid"></div><div class="cloud-actions"><button id="read_schedule" type="button">อ่านค่าหมวดนี้</button><button id="discard_schedule" class="ghost" type="button">ยกเลิกการแก้ไข</button><button id="save_schedule" class="primary" type="button">บันทึกเฉพาะหมวดนี้</button></div></details>
+<details open><summary>2. Wind Calibration &amp; Safety (ESP32)</summary>
+<p class="help">ค่าจาก ESP32/NVS เท่านั้น · Warning/Critical = RAW Encoder RPM (ไม่บวก Offset) · Wind m/s conversion เป็นข้อมูลแสดงผลเท่านั้น · Save แล้วถอน Approval อัตโนมัติ ต้องทดสอบและอนุมัติผ่าน Local AP ก่อน RF จริง</p>
+<div class="notice" id="windCloudApproval">Wind limits: waiting for ESP32 telemetry</div>
+<div id="cfg_wind" class="cloud-grid"></div><div class="cloud-actions"><button id="read_wind" type="button">อ่านค่า Wind จาก ESP32</button><button id="discard_wind" class="ghost" type="button">ยกเลิกการแก้ไข</button><button id="save_wind" class="primary" type="button">บันทึก Wind / ถอน Approval</button></div>
+<p class="mini">กรอก RPM สองค่าคั่นด้วย comma; ไม่มีการเติมค่าทดลองอัตโนมัติ. หากต้อง Clear ให้กรอก CLEAR. Cloud ตั้งค่าได้เมื่อ ESP32 อนุญาต Cloud Settings; <strong>ไม่สามารถอนุมัติความปลอดภัยแทนการทดสอบที่หน้างาน</strong>.</p></details>
+<details><summary>3. Auto Retry / Reed Confirmation</summary><p class="help">กำหนดจำนวนครั้งและเวลารอการยืนยันตำแหน่ง ขณะนี้เป็นการจำลอง RF เท่านั้น</p><div id="cfg_retry" class="cloud-grid"></div><div class="cloud-actions"><button id="read_retry">อ่านค่า</button><button id="discard_retry" class="ghost">ยกเลิกแก้ไข</button><button id="save_retry" class="primary">บันทึก Auto Retry</button></div></details>
+<details><summary>4. OLED Display</summary><p class="help">ตั้งค่าการเปิดจอตลอดเวลา หรือให้จอพักหลังไม่ใช้งาน</p><div id="cfg_oled" class="cloud-grid"></div><div class="cloud-actions"><button id="read_oled">อ่านค่า</button><button id="discard_oled" class="ghost">ยกเลิกแก้ไข</button><button id="save_oled" class="primary">บันทึก OLED</button></div></details>
+<details><summary>5. Google Sheets / Batch Upload</summary><p class="help">เลือกประเภทข้อมูลและช่วงเวลาที่ส่งขึ้น Google Sheets; Token เดิมจะไม่ถูกแสดงกลับมาที่ Browser</p><div id="cfg_sheets" class="cloud-grid"></div><div class="cloud-actions"><button id="read_sheets">อ่านค่า</button><button id="discard_sheets" class="ghost">ยกเลิกแก้ไข</button><button id="save_sheets" class="primary">บันทึก Google Sheets</button></div></details>
+<details><summary>6. Network / AP / HiveMQ (ขั้นสูง)</summary><p class="help">⚠ การเปลี่ยน SSID, Host, Port, Device ID, Username หรือรหัสผ่านจะมีผลหลัง Restart; หากตั้งผิดอาจต้องกลับไปกู้ผ่าน AP. การแก้สิทธิ์สำคัญต้องใช้ Admin Key</p><div id="cfg_network" class="cloud-grid"></div><div class="cloud-actions"><button id="read_network">อ่านค่า</button><button id="discard_network" class="ghost">ยกเลิกแก้ไข</button><button id="save_network" class="primary">บันทึก Network (ขั้นสูง)</button></div></details>
+</div>
+<div class="panel"><h2>เครื่องมือสำหรับผู้ดูแล</h2><p class="help">การทดสอบ Sheets และ Reset Fault ไม่เกี่ยวกับการเปลี่ยนโหมด โปรดใช้เมื่อทราบผลกระทบ</p><div class="cloud-actions"><button id="testSheetCloud">ส่งรายการ TEST ไป Sheets</button><button id="resetRetryCloud">รีเซ็ต Auto Retry Lockout</button><button id="rebootCloud" class="danger">Restart ESP32</button></div><p class="mini">การรีสตาร์ตจะตัด Cloud ชั่วคราว และอาจทำให้ Firmware กลับเป็น AUTO ตามการออกแบบ</p></div></section>
+<section data-page="diagnostics" hidden><h2 class="page-title">ตรวจสอบการเชื่อมต่อ</h2><p class="page-intro">แยกสถานะ Browser → HiveMQ → ESP32 → ACK เพื่อหาต้นเหตุได้เร็ว</p>
+<div class="panel"><h2>การเชื่อมต่อและการยืนยันคำสั่ง</h2><div class="grid"><div class="card compact"><small>ESP32 Online</small><strong id="deviceState">--</strong></div><div class="card compact"><small>Last Command ACK</small><strong id="ack">--</strong></div><div class="card compact"><small>Last Telemetry</small><strong id="lastData">--</strong></div><div class="card compact"><small>MQTT Base Topic</small><strong id="topic">--</strong></div></div></div>
+<div class="panel"><h2>MQTT Diagnostics</h2><div class="grid"><div class="card compact"><small>การ Subscribe</small><strong id="subState">รอเชื่อมต่อ</strong></div><div class="card compact"><small>ESP32 Status</small><strong id="espState">รอข้อมูล</strong></div><div class="card compact"><small>ข้อความที่ได้รับ</small><strong id="rxCount">0</strong></div><div class="card compact"><small>Topic ล่าสุด</small><strong id="lastRxTopic">--</strong></div></div><p class="mini">ควรได้รับ <code id="expectedTopic">umbrella/umbrella-001/telemetry</code></p><p id="diagMessage" class="mini">กรุณาเชื่อมต่อ</p></div>
+<div class="panel" id="preRfDiagnostics"><h2>Pre-CC1101 Commissioning / ESP32 Diagnostics</h2><p class="mini">ค่าจาก Firmware จริงเท่านั้น; MISSING = ยังไม่ทราบ, PENDING = ยังไม่พร้อม; RF/Motor ปิดตลอดเวอร์ชันนี้</p><div id="swgDiagOverall" role="status" class="notice">WAITING FOR LIVE ESP32</div><div id="swgDiagRows" style="display:grid;gap:6px"></div><p class="mini">สถานะ PASS จาก Telemetry ไม่ใช่การทดสอบ Safety Hardware; Reed limit-switch, CC1101 output, motion timeout, emergency fail-safe ต้องทดสอบแยกจริงก่อนเปิดใช้ RF</p></div><div class="panel"><h2>Activity Log</h2><pre id="log">ยังไม่เชื่อมต่อ Cloud</pre></div>
+</section>
+<!-- Keep hidden config group for protocol compatibility. Operator mode is handled exclusively on Control page. -->
+<div class="hidden-support"><div id="cfg_control"></div><button id="read_control"></button><button id="save_control"></button></div>
+<footer>SWG-DECODE Cloud HMI v1.1 · Graph Diagnostics · ใช้ Firmware V0.7.14 เพื่อแสดง Reed/Limit จริง · RF/MOTOR OFF · Safety ต้องทดสอบก่อนใช้งานจริง</footer></main>
+<div class="sheet" id="modal" role="dialog" aria-modal="true" aria-label="เชื่อมต่อ HiveMQ"><div class="inner"><h2>เชื่อมต่อ HiveMQ Cloud</h2><p class="muted">เปิดอินเทอร์เน็ตก่อน · ESP32 ใช้ TLS 8883, Browser ใช้ WSS 8884/mqtt</p><label for="host">HiveMQ Host</label><input id="host" placeholder="xxxxxxxx.s1.eu.hivemq.cloud" autocomplete="off"><label for="device">Device ID</label><input id="device" value="umbrella-001" autocomplete="off"><label for="user">Dashboard MQTT Username</label><input id="user" autocomplete="username"><label for="pass">Dashboard MQTT Password</label><input id="pass" type="password" autocomplete="current-password"><p class="mini">เบราว์เซอร์จะจำ Host, Device ID และ Username เท่านั้น ไม่บันทึก Password</p><p id="connectError" class="notice error"></p><div class="form-actions"><button id="cancel">ยกเลิก</button><button id="connect" class="primary">เชื่อมต่อ</button></div><button id="disconnect" style="display:none;width:100%;margin-top:10px" class="danger">ตัดการเชื่อมต่อ</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/mqtt@5.15.2/dist/mqtt.min.js"></script>
+<script>
+'use strict';
+const el=id=>document.getElementById(id);let client=null,base='',telemetry=null,status=null,lastRx=0,historyWind=[],historyTemp=[],rxMessages=0,subscriptionOK=false,lastTelemetryLog=0;
+function log(m){let t=new Date().toLocaleTimeString('th-TH');el('log').textContent=(t+'  '+m+'\n'+el('log').textContent).slice(0,4500)}
+function modal(open){el('modal').classList.toggle('open',open)}
+function fmt(n,d=1){return typeof n==='number'&&Number.isFinite(n)?n.toFixed(d):'--'}
+let store={};try{store=JSON.parse(localStorage.getItem('swg-hivemq-v710')||'{}')}catch(_){};
+for(let k of ['host','device','user'])if(store[k])el(k).value=store[k];
+el('openSettings').onclick=()=>modal(true);el('cancel').onclick=()=>modal(false);
+function updateButtons(){const ok=!!client?.connected && !!status?.online && telemetry?.control_mode==='MANUAL' && telemetry?.mqtt_remote_enabled===true;
+  el('openBtn').disabled=!(ok && status?.openAllowed===true);el('closeBtn').disabled=!ok;el('stopBtn').disabled=!ok;
+  el('remote').textContent=telemetry?.mqtt_remote_enabled?'ENABLED':'DISABLED';}
+function connected(v){el('brokerStatus').textContent=v?'BROKER CONNECTED':'BROKER OFFLINE';el('brokerStatus').classList.toggle('ok',v);el('connect').disabled=v;el('disconnect').style.display=v?'block':'none';updateButtons()}
+function draw(id,data){const canvas=el(id);const r=canvas.getBoundingClientRect(),w=Math.max(10,r.width),h=Math.max(10,r.height),dpr=Math.min(devicePixelRatio||1,3);canvas.width=w*dpr;canvas.height=h*dpr;const c=canvas.getContext('2d');c.setTransform(dpr,0,0,dpr,0,0);c.strokeStyle='#36536b';c.lineWidth=1;for(let i=1;i<4;i++){c.beginPath();c.moveTo(0,i*h/4);c.lineTo(w,i*h/4);c.stroke()}if(data.length<2){c.font='12px system-ui';c.fillStyle='#a0bfd4';c.fillText('Waiting for live telemetry...',12,h/2);return;}const a=Math.min(...data),b=Math.max(...data),spread=Math.max(1,b-a);c.strokeStyle='#67d5d7';c.lineWidth=2;c.beginPath();data.forEach((v,i)=>{const x=5+i*(w-10)/89,y=h-8-(v-a)/spread*(h-16);i?c.lineTo(x,y):c.moveTo(x,y)});c.stroke();c.font='11px monospace';c.fillStyle='#c3e3f5';c.fillText('max '+b.toFixed(1),8,15)}
+function ingest(t){telemetry=t;lastRx=Date.now();el('rxCount').textContent=String(rxMessages);el('rpm').textContent=fmt(t.rpm);el('gust').textContent=fmt(t.wind_gust_rpm);el('temp').textContent=fmt(t.temperature_corrected_c??t.temperature_c);el('roof').textContent=t.position||'--';el('mode').textContent=t.control_mode||'--';el('safety').textContent=t.safety_reason||'--';el('schedule').textContent=t.schedule_active?'ACTIVE':'INACTIVE';el('lastData').textContent=new Date().toLocaleTimeString('th-TH');const rpm=t.rpm==null?NaN:Number(t.rpm),temp=(t.temperature_corrected_c??t.temperature_c)==null?NaN:Number(t.temperature_corrected_c??t.temperature_c);if(Number.isFinite(rpm)){historyWind.push(rpm);if(historyWind.length>90)historyWind.shift();draw('windGraph',historyWind)}if(Number.isFinite(temp)){historyTemp.push(temp);if(historyTemp.length>90)historyTemp.shift();draw('tempGraph',historyTemp)}updateButtons()}
+function normalizeHost(x){return x.trim().replace(/^wss?:\/\//i,'').replace(/:8884.*$/,'').replace(/\/$/,'')}
+el('connect').onclick=()=>{const host=normalizeHost(el('host').value),dev=el('device').value.trim(),user=el('user').value.trim(),pass=el('pass').value;el('connectError').textContent='';if(!host||!dev||!user||!pass){el('connectError').textContent='กรอก Host / Device ID / Username / Password ให้ครบ';return}if(!window.mqtt){el('connectError').textContent='ไม่สามารถโหลด MQTT.js ได้ เปิด HTML ผ่าน HTTPS ใน Safari/Chrome';return}base='umbrella/'+dev;el('topic').textContent=base;el('expectedTopic').textContent=base+'/telemetry';rxMessages=0;subscriptionOK=false;telemetry=null;status=null;lastRx=0;el('rxCount').textContent='0';el('subState').textContent='SUBSCRIBING';el('espState').textContent='WAITING STATUS';el('diagMessage').textContent='Connecting and subscribing to '+base+'/# ...';try{localStorage.setItem('swg-hivemq-v710',JSON.stringify({host,device:dev,user}))}catch(_){};client?.end(true);client=mqtt.connect('wss://'+host+':8884/mqtt',{username:user,password:pass,clientId:'swg-v710-mobile-'+Math.random().toString(16).slice(2,10),clean:true,connectTimeout:20000,reconnectPeriod:5000,keepalive:30});swgCloudAttach(client);client.on('connect',()=>{connected(true);modal(false);client.subscribe(base+'/#',{qos:0},(err,granted)=>{const denied=Array.isArray(granted)&&granted.some(g=>g.qos===128);subscriptionOK=!err&&!denied;el('subState').textContent=subscriptionOK?'SUBSCRIBED':'SUBSCRIBE FAILED';if(!subscriptionOK){el('diagMessage').textContent='Access denied or SUBSCRIBE failed. Check HiveMQ credentials and topic ACL.';log('SUBSCRIBE FAIL '+(err?.message||'ACL denied'));}else{el('diagMessage').textContent='Subscribed. Waiting for ESP32 to publish '+base+'/telemetry';log('SUB OK '+base+'/#');}});log('MQTT WSS connected')});client.on('message',(topic,payload)=>{rxMessages++;el('rxCount').textContent=String(rxMessages);el('lastRxTopic').textContent=topic;let obj;try{obj=JSON.parse(payload.toString())}catch(_){log('Invalid JSON on '+topic+' bytes='+payload.length);return}if(topic===base+'/telemetry'){ingest(obj);el('diagMessage').textContent='Live telemetry received ('+payload.length+' bytes)';if(Date.now()-lastTelemetryLog>30000){lastTelemetryLog=Date.now();log('TELEMETRY RX '+payload.length+' B '+topic);}}else if(topic===base+'/status'){status=obj;el('espState').textContent=obj.online===true?'ONLINE':'OFFLINE';el('deviceState').textContent=obj.online===true?'ONLINE':'OFFLINE';updateButtons();log('ESP32 STATUS: '+(obj.online?'ONLINE':'OFFLINE'));}else if(topic===base+'/ack'){el('ack').textContent=(obj.action||'')+' '+(obj.result||'');el('notice').textContent='ESP32 ACK: '+(obj.result||'');log('ACK '+obj.id+': '+obj.action+' '+obj.result)}else log('RX '+topic)});client.on('error',e=>{el('connectError').textContent=e.message;log('ERROR '+e.message)});client.on('offline',()=>{connected(false);el('subState').textContent='OFFLINE';log('MQTT offline')});client.on('close',()=>{connected(false);el('subState').textContent='DISCONNECTED'})};
+el('disconnect').onclick=()=>{client?.end(true);client=null;connected(false);log('Disconnected')};
+function command(action){if(!client?.connected)return;if(action==='OPEN' && (!status?.openAllowed || !confirm('OPEN จะผ่าน Safety และยังไม่สั่ง RF จริง ยืนยันหรือไม่?')))return;if(action==='CLOSE'&&!confirm('ส่งคำสั่ง CLOSE แบบจำลอง?'))return;const id='m'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);const cmd={device:el('device').value.trim(),id,action,ts:Math.floor(Date.now()/1000)};client.publish(base+'/cmd',JSON.stringify(cmd),{qos:1,retain:false},err=>{if(err)log('SEND ERROR '+err.message);else log('TX '+action+' id='+id)});el('notice').textContent='รอ ACK จาก ESP32: '+action}
+for(let a of ['OPEN','CLOSE','STOP'])el(a.toLowerCase()+'Btn').onclick=()=>command(a);
+setInterval(()=>{if(lastRx&&Date.now()-lastRx>20000){el('lastData').textContent='STALE '+Math.round((Date.now()-lastRx)/1000)+'s';el('diagMessage').textContent='Telemetry stale: ESP32 publish may be failing/disconnected.';}else if(client?.connected&&subscriptionOK&&!lastRx){el('diagMessage').textContent='Subscribed, but NO TELEMETRY from ESP32. Check OLED TX, MQTT Device ID and ESP32 topic.';}},1000);
+window.addEventListener('resize',()=>{draw('windGraph',historyWind);draw('tempGraph',historyTemp)});connected(false);if(!store.host)setTimeout(()=>modal(true),100);
+</script>
+<script>
+'use strict';
+/* V0.7.11h: Operator graph overlays only.
+ * This script decorates the proven V0.7.11g chart functions; it does not
+ * touch MQTT subscriptions, control commands, safety, cfg/set or NVS.
+ * Time-aligned Reed samples are from ESP32 MQTT debounced booleans ONLY.
+ */
+(()=>{
+  const previousDraw=draw, previousIngest=ingest;
+  let samples=[];
+  let activeDevice='';
+  const MAX_SAMPLES=90;
+  const defaults=()=>({wind:{limits:true,reed:true,gust:true,lsl:null,usl:null,emergency:null},temp:{limits:true,reed:true,lsl:null,usl:null,emergency:null}});
+  let settings=defaults();
+  const storageKey=()=> 'swg-hmi-graph-v711h:'+ (el('device').value.trim()||'umbrella-001');
+  const validLimit=(v,kind)=>Number.isFinite(v)&&(kind==='wind'?v>=0:v>=-55&&v<=125);
+  const parseLimit=(s,kind)=>{if(typeof s!=='string'||s.trim()==='')return null;const n=Number(s);return validLimit(n,kind)?n:null};
+  function load(){
+    settings=defaults();
+    try{
+      const saved=JSON.parse(localStorage.getItem(storageKey())||'null');
+      if(saved&&typeof saved==='object')for(const kind of ['wind','temp'])if(saved[kind])
+        for(const k of ['limits','reed',...(kind==='wind'?['gust']:[])])
+          if(typeof saved[kind][k]==='boolean')settings[kind][k]=saved[kind][k];
+    }catch(_){}
+    document.querySelectorAll('[data-gopt]').forEach(node=>{
+      const [kind,key]=node.dataset.gopt.split('.');node.checked=settings[kind][key];
+    });
+    updateLimitReadouts();
+  }
+  function updateLimitReadouts(){
+    document.querySelectorAll('[data-glimit]').forEach(node=>{
+      const [kind,key]=node.dataset.glimit.split('.');
+      node.value=settings[kind][key]??'';
+      node.placeholder='NOT CONFIGURED';
+      node.disabled=true;
+    });
+  }
+  function syncRealLimits(t){
+    // Real ESP32 NVS values are shown even before local approval, clearly
+    // labeled PROVISIONAL (not a safe/approved threshold). Never use Browser guesses.
+    const windOK=t.wind_limits_approved===true;
+    settings.wind.lsl=null; // Firmware has no wind LSL parameter
+    settings.wind.usl=asNumber(t.wind_warning_rpm);
+    settings.wind.emergency=asNumber(t.wind_critical_rpm);
+    // TEMP: Firmware uses CLOSE threshold <=, OPEN threshold >=.
+    settings.temp.lsl=t.temp_thresholds_configured===true?asNumber(t.temp_close_c):null;
+    settings.temp.usl=t.temp_thresholds_configured===true?asNumber(t.temp_open_c):null;
+    settings.temp.emergency=null; // firmware has no temperature emergency threshold
+    updateLimitReadouts();
+    el('windConfigState').textContent=settings.wind.usl!==null&&settings.wind.emergency!==null?
+      'ESP32 Wind: WARNING '+settings.wind.usl+' RPM · CRITICAL '+settings.wind.emergency+' RPM · '+
+       (windOK?'LOCALLY APPROVED':'PENDING PHYSICAL APPROVAL (provisional display only)'):
+      'ESP32 Wind: NOT CONFIGURED — set both limits in Wind Settings';
+    el('tempConfigState').textContent=settings.temp.lsl!==null&&settings.temp.usl!==null?
+      'ESP32 Temperature: CLOSE ≤ '+settings.temp.lsl+' °C · OPEN ≥ '+settings.temp.usl+' °C':
+      'ESP32 Temperature: NOT CONFIGURED — set OPEN/CLOSE in ESP32 Settings';
+  }
+  function save(){
+    try{localStorage.setItem(storageKey(),JSON.stringify({
+      wind:{limits:settings.wind.limits,reed:settings.wind.reed,gust:settings.wind.gust},
+      temp:{limits:settings.temp.limits,reed:settings.temp.reed}
+    }))}catch(_){}
+  }
+  function asNumber(n){return n===null||n===undefined||n===''?null:(Number.isFinite(Number(n))?Number(n):null)}
+  function boolReed(v){return v===true?1:v===false?0:null}
+  function updateReadout(){
+    const v=samples[samples.length-1];
+    const s= !v || v.open===null || v.closed===null?'Reed: ESP32 ยังไม่ส่งค่า OPEN/CLOSED ผ่าน MQTT':
+       `Reed OPEN: ${v.open?'ON':'OFF'}  ·  CLOSED: ${v.closed?'ON':'OFF'}`+(v.conflict?'  ·  ⚠ CONFLICT':'')+((!client?.connected||Date.now()-lastRx>20000)?'  ·  STALE (last known)':'  ·  LIVE');
+    const counts=v&&Number.isFinite(v.openEdges)&&Number.isFinite(v.closedEdges)?
+      ' · Stable edges OPEN '+v.openEdges+' / CLOSED '+v.closedEdges:'';
+    el('windReedState').textContent=s+counts;el('tempReedState').textContent=s+counts;
+  }
+  const lineColor={lsl:'#f2de82',usl:'#ff9e76',emergency:'#ff657a'};
+  const lineName={lsl:'CLOSE',usl:'OPEN/WARN',emergency:'CRITICAL'};
+  function render(kind){
+    // Visual-only renderer (HMI v1.2 graphics). Data selection, scaling, freshness,
+    // limit/provisional and Reed logic are identical to V0.7.11h.
+    const canvas=el(kind==='wind'?'windGraph':'tempGraph');
+    if(!canvas)return;
+    const rect=canvas.getBoundingClientRect();
+    if(rect.width<10||rect.height<10)return;
+    const w=rect.width,h=rect.height,dpr=Math.min(window.devicePixelRatio||1,2.5);
+    canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);
+    const c=canvas.getContext('2d');c.setTransform(dpr,0,0,dpr,0,0);c.clearRect(0,0,w,h);
+    const left=w<390?43:48,right=w<390?57:69,x0=left,x1=w-right,plotTop=18,bandTop=h-62,plotBottom=bandTop-17;
+    const n=samples.length;
+    const now=Date.now();
+    const first=n?samples[0].receivedAt:now;
+    const span=Math.max(60000,now-first);
+    const xAt=i=>x0+Math.max(0,Math.min(1,(samples[i].receivedAt-(now-span))/span))*(x1-x0);
+    const fresh=!!lastRx && now-lastRx<=20000 && !!client?.connected;
+    const cfg=settings[kind];
+    const mainKey=kind==='wind'?'rpm':'temp';
+    const values=[];
+    for(const sample of samples){
+      if(Number.isFinite(sample[mainKey]))values.push(sample[mainKey]);
+      if(kind==='wind'&&cfg.gust&&Number.isFinite(sample.gust))values.push(sample.gust);
+    }
+    if(cfg.limits)for(const key of ['lsl','usl','emergency'])if(cfg[key]!==null)values.push(cfg[key]);
+    const base=kind==='wind'?0:25;
+    let min=values.length?Math.min(...values):base;
+    let max=values.length?Math.max(...values):kind==='wind'?100:35;
+    if(kind==='wind')min=Math.min(min,0);
+    const pad=Math.max(kind==='wind'?3:0.6,(max-min)*0.12);
+    min-=kind==='wind'?0:pad;max+=pad;
+    if(max-min<(kind==='wind'?10:2)){const mid=(max+min)/2;min=mid-(kind==='wind'?5:1);max=mid+(kind==='wind'?5:1);if(kind==='wind')min=Math.max(0,min)}
+    const yAt=value=>plotBottom-(value-min)/(max-min)*(plotBottom-plotTop);
+    const FONT='"IBM Plex Sans Thai",system-ui,sans-serif',MONO='"IBM Plex Mono",ui-monospace,monospace';
+    const rrect=(x,y,ww,hh,r)=>{c.beginPath();c.moveTo(x+r,y);c.arcTo(x+ww,y,x+ww,y+hh,r);c.arcTo(x+ww,y+hh,x,y+hh,r);c.arcTo(x,y+hh,x,y,r);c.arcTo(x,y,x+ww,y,r);c.closePath()};
+    const pill=(text,x,y,color,align)=>{
+      c.font='600 10px '+MONO;const tw=c.measureText(text).width,pw=tw+10,ph=16;
+      const px=Math.min(align==='right'?x-pw:x,w-2-pw),py=Math.round(y-ph/2);
+      c.fillStyle='rgba(6,16,28,.88)';rrect(px,py,pw,ph,8);c.fill();
+      c.strokeStyle=color;c.lineWidth=1;c.globalAlpha=.75;c.stroke();c.globalAlpha=1;
+      c.fillStyle=color;c.textBaseline='middle';c.fillText(text,px+5,py+ph/2+.5);c.textBaseline='alphabetic';
+      return pw;
+    };
+    const hexA=(hex,a)=>{const v=parseInt(hex.slice(1),16);return `rgba(${v>>16&255},${v>>8&255},${v&255},${a})`};
+    // Plot well: soft vertical gradient behind the measurement area.
+    const well=c.createLinearGradient(0,plotTop,0,plotBottom);
+    well.addColorStop(0,'rgba(94,200,255,.05)');well.addColorStop(1,'rgba(94,200,255,0)');
+    c.fillStyle=well;rrect(x0,plotTop-6,x1-x0,plotBottom-plotTop+12,8);c.fill();
+    // Grid: dotted horizontals with y labels, light time divisions.
+    c.lineWidth=1;
+    for(let k=0;k<4;k++){
+      const y=Math.round(plotTop+(plotBottom-plotTop)*k/3)+.5;
+      c.strokeStyle=k===3?'rgba(140,190,225,.28)':'rgba(140,190,225,.12)';
+      c.setLineDash(k===3?[]:[2,4]);c.beginPath();c.moveTo(x0,y);c.lineTo(x1,y);c.stroke();c.setLineDash([]);
+      c.font='500 10.5px '+MONO;c.fillStyle='#86a7bd';c.textAlign='right';
+      c.fillText((max-(max-min)*k/3).toFixed(kind==='wind'?0:1),x0-7,y+3.5);c.textAlign='left';
+    }
+    for(let k=1;k<4;k++){const x=Math.round(x0+(x1-x0)*k/4)+.5;c.strokeStyle='rgba(140,190,225,.06)';c.beginPath();c.moveTo(x,plotTop-4);c.lineTo(x,plotBottom);c.stroke()}
+    c.font='600 10px '+FONT;c.fillStyle='#7fa2b9';c.fillText(kind==='wind'?'RPM':'°C',6,11);
+    // Dashed limits have NO actuator/safety side effects.
+    if(cfg.limits){
+      const lines=['lsl','usl','emergency'].filter(key=>cfg[key]!==null);
+      const provisional=kind==='wind' && telemetry?.wind_limits_approved!==true;
+      // Soft hazard tint above wind Warning/Critical (visual cue only).
+      if(kind==='wind'){
+        for(const [key,a] of [['usl',.06],['emergency',.08]])if(cfg[key]!==null){
+          const y=Math.max(plotTop-6,Math.min(plotBottom,yAt(cfg[key])));
+          const g=c.createLinearGradient(0,plotTop-6,0,y);
+          g.addColorStop(0,hexA(provisional?'#e7a86b':lineColor[key],a));g.addColorStop(1,hexA(provisional?'#e7a86b':lineColor[key],0));
+          c.fillStyle=g;c.fillRect(x0,plotTop-6,x1-x0,y-plotTop+6);
+        }
+      }
+      lines.forEach(key=>{
+        const y=Math.round(yAt(cfg[key]))+.5;
+        const col=provisional?'#e7a86b':lineColor[key];
+        c.setLineDash([7,5]);c.lineWidth=1.4;c.strokeStyle=col;c.globalAlpha=.9;
+        c.beginPath();c.moveTo(x0,y);c.lineTo(x1,y);c.stroke();c.setLineDash([]);c.globalAlpha=1;
+        const label=(kind==='temp'?(key==='lsl'?'CLOSE':key==='usl'?'OPEN':'N/A'):(key==='usl'?'WARN':key==='emergency'?'CRIT':'N/A'))+' '+cfg[key];
+        pill(label,x1+4,Math.max(10,Math.min(plotBottom-3,y)),col,'left');
+      });
+    }
+    // Smooth trace split at data gaps (null samples), with glow and optional area fill.
+    function segments(key){
+      const out=[];let cur=[];
+      for(let i=0;i<n;i++){const v=samples[i][key];if(!Number.isFinite(v)){if(cur.length)out.push(cur);cur=[];continue}cur.push({x:xAt(i),y:yAt(v),v})}
+      if(cur.length)out.push(cur);return out;
+    }
+    function pathOf(pts){
+      c.moveTo(pts[0].x,pts[0].y);
+      if(pts.length===1){c.lineTo(pts[0].x+.01,pts[0].y);return}
+      for(let i=1;i<pts.length-1;i++){const mx=(pts[i].x+pts[i+1].x)/2,my=(pts[i].y+pts[i+1].y)/2;c.quadraticCurveTo(pts[i].x,pts[i].y,mx,my)}
+      const l=pts[pts.length-1];c.lineTo(l.x,l.y);
+    }
+    function trace(key,color,thickness,fill){
+      const segs=segments(key);
+      if(fill)for(const pts of segs){
+        if(pts.length<2)continue;
+        const g=c.createLinearGradient(0,plotTop,0,plotBottom);
+        g.addColorStop(0,hexA(color,.32));g.addColorStop(1,hexA(color,0));
+        c.beginPath();pathOf(pts);c.lineTo(pts[pts.length-1].x,plotBottom);c.lineTo(pts[0].x,plotBottom);c.closePath();
+        c.fillStyle=g;c.fill();
+      }
+      c.lineJoin='round';c.lineCap='round';
+      for(const pts of segs){
+        c.save();c.shadowColor=hexA(color,.55);c.shadowBlur=fill?10:5;
+        c.beginPath();pathOf(pts);c.strokeStyle=color;c.lineWidth=thickness;c.stroke();c.restore();
+      }
+      return segs;
+    }
+    if(kind==='wind'&&cfg.gust)trace('gust','#f4c27a',1.4,false);
+    const mainSegs=trace(mainKey,'#67d5d7',2.4,true);
+    // Latest-value marker (last plotted sample).
+    const lastSeg=mainSegs[mainSegs.length-1];
+    if(lastSeg&&lastSeg.length){
+      const p=lastSeg[lastSeg.length-1];
+      c.save();c.fillStyle=fresh?'#67d5d7':'#7d93a6';c.shadowColor=fresh?'#67d5d7':'transparent';c.shadowBlur=fresh?14:0;
+      c.beginPath();c.arc(p.x,p.y,4.2,0,Math.PI*2);c.fill();c.restore();
+      c.strokeStyle='#061220';c.lineWidth=1.5;c.beginPath();c.arc(p.x,p.y,4.2,0,Math.PI*2);c.stroke();
+      if(fresh){c.strokeStyle='rgba(103,213,215,.35)';c.lineWidth=1;c.beginPath();c.arc(p.x,p.y,8.5,0,Math.PI*2);c.stroke()}
+      const txt=p.v.toFixed(kind==='wind'?1:2)+(kind==='wind'?' RPM':' °C');
+      c.font='600 10px '+MONO;const tw=c.measureText(txt).width+10;
+      const ly=Math.max(plotTop+2,Math.min(plotBottom-8,p.y-14));
+      pill(txt,Math.max(x0,p.x-tw-8),ly,fresh?'#9ff0ee':'#9bb2c4','left');
+    }
+    // Two separate digital tracks in the SAME canvas sharing the measurement x-axis.
+    if(cfg.reed){
+      c.strokeStyle='rgba(140,190,225,.14)';c.lineWidth=1;c.beginPath();c.moveTo(0,bandTop-8.5);c.lineTo(w,bandTop-8.5);c.stroke();
+      for(const [key,color,label,ybase] of [['open','#55d6a9','OPEN',bandTop],['closed','#bdacff','CLOSED',bandTop+23]]){
+        c.fillStyle='rgba(140,190,225,.045)';rrect(x0,ybase,x1-x0,19,5);c.fill();
+        c.font='600 9.5px '+FONT;c.fillStyle=color;c.fillText(label,2,ybase+13);
+        let previous=null;const pts=[];
+        for(let i=0;i<n;i++){
+          const v=samples[i][key],x=xAt(i);
+          if(v!==0&&v!==1){if(pts.length)pts.push(null);previous=null;continue}
+          pts.push({x,v});previous={x,v};
+        }
+        if(previous && fresh)pts.push({x:x1,v:previous.v});
+        // Filled ON regions + crisp square-wave outline.
+        const yOn=ybase+3,yOff=ybase+16;
+        c.fillStyle=hexA(color,.18);
+        for(let i=0;i+1<pts.length;i++){const a=pts[i],b=pts[i+1];if(!a||!b)continue;if(a.v===1)c.fillRect(a.x,yOn,b.x-a.x,yOff-yOn)}
+        c.lineWidth=2;c.strokeStyle=color;c.lineJoin='miter';c.lineCap='butt';
+        let open=false;c.beginPath();
+        for(let i=0;i<pts.length;i++){
+          const p=pts[i];if(!p){open=false;continue}
+          const y=p.v===1?yOn:yOff;
+          if(!open){c.moveTo(p.x-1,y);c.lineTo(p.x+1,y);open=true;continue}
+          const prevY=pts[i-1].v===1?yOn:yOff;c.lineTo(p.x,prevY);c.lineTo(p.x,y);
+        }
+        c.stroke();
+        c.font='500 9px '+MONO;c.fillStyle='#8aa5b9';c.fillText('1',x1+5,yOn+3);c.fillText('0',x1+5,yOff+3);
+      }
+    }
+    // Footer: sample count + LIVE/STALE badge.
+    c.font='500 10px '+FONT;c.fillStyle='#86a2b6';
+    c.fillText(n?`${n} received events / telemetry`:'รอข้อมูลสด',x0,h-3);
+    const badge=fresh?'NOW / LIVE':'STALE / NO LIVE DATA';
+    c.font='700 9.5px '+MONO;const bw=c.measureText(badge).width+20,bx=w-4-bw,by=h-15;
+    c.fillStyle=fresh?'rgba(79,224,181,.14)':'rgba(255,122,136,.12)';rrect(bx,by,bw,14,7);c.fill();
+    c.fillStyle=fresh?'#4fe0b5':'#ff8f9b';c.beginPath();c.arc(bx+7,by+7,2.6,0,Math.PI*2);c.fill();
+    c.fillText(badge,bx+13,by+10.5);
+    if(n<2){c.font='500 12px '+FONT;c.fillStyle='#a9c4d6';c.textAlign='center';c.fillText('กำลังรอ Sensor / Reed Telemetry...',(x0+x1)/2,(plotTop+plotBottom)/2+4);c.textAlign='left'}
+
+    // Crosshair inspector (display only): nearest received sample under finger/mouse.
+    if(hover&&hover.kind===kind&&n){
+      let bi=-1,bd=1e9;
+      for(let i=0;i<n;i++){const s=samples[i];if(!Number.isFinite(s[mainKey])&&s.open===null&&s.closed===null)continue;const d=Math.abs(xAt(i)-hover.x);if(d<bd){bd=d;bi=i}}
+      if(bi>=0&&bd<48){
+        const s=samples[bi],x=Math.round(xAt(bi))+.5;
+        c.save();c.setLineDash([3,3]);c.strokeStyle='rgba(220,240,255,.45)';c.lineWidth=1;
+        c.beginPath();c.moveTo(x,plotTop-6);c.lineTo(x,cfg.reed?bandTop+42:plotBottom);c.stroke();c.restore();
+        const dot=(v,col)=>{if(!Number.isFinite(v))return;const y=yAt(v);c.save();c.fillStyle=col;c.shadowColor=col;c.shadowBlur=10;c.beginPath();c.arc(x,y,3.6,0,Math.PI*2);c.fill();c.restore();c.strokeStyle='#061220';c.lineWidth=1.3;c.beginPath();c.arc(x,y,3.6,0,Math.PI*2);c.stroke()};
+        if(kind==='wind'&&cfg.gust)dot(s.gust,'#f4c27a');
+        dot(s[mainKey],'#67d5d7');
+        const t=new Date(s.receivedAt).toLocaleTimeString('th-TH',{hour12:false});
+        const unit=kind==='wind'?' RPM':' °C',dg=kind==='wind'?1:2;
+        const rows=[[t,'#9fb8cc']];
+        rows.push([(kind==='wind'?'RPM   ':'TEMP  ')+(Number.isFinite(s[mainKey])?s[mainKey].toFixed(dg)+unit:'--'),'#67d5d7']);
+        if(kind==='wind'&&cfg.gust)rows.push(['GUST  '+(Number.isFinite(s.gust)?s.gust.toFixed(dg)+unit:'--'),'#f4c27a']);
+        if(cfg.reed)rows.push(['REED  O:'+(s.open===1?'ON':s.open===0?'OFF':'--')+' C:'+(s.closed===1?'ON':s.closed===0?'OFF':'--')+(s.conflict?' ⚠':''),s.conflict?'#ff8f9b':'#bdacff']);
+        c.font='600 10.5px '+MONO;
+        const bw=Math.max(...rows.map(r=>c.measureText(r[0]).width))+18,bh=rows.length*15+10;
+        let bx=x+12;if(bx+bw>w-4)bx=x-12-bw;bx=Math.max(4,bx);const by=plotTop+2;
+        c.save();c.shadowColor='rgba(0,0,0,.6)';c.shadowBlur=14;c.fillStyle='rgba(7,18,32,.94)';rrect(bx,by,bw,bh,9);c.fill();c.restore();
+        c.strokeStyle='rgba(94,200,255,.45)';c.lineWidth=1;rrect(bx+.5,by+.5,bw-1,bh-1,9);c.stroke();
+        rows.forEach((r,i)=>{c.fillStyle=r[1];c.fillText(r[0],bx+9,by+18+i*15)});
+      }
+    }
+  }
+  function renderBoth(){render('wind');render('temp')}
+  // Inspector input (display only; no MQTT/control side effects).
+  let hover=null,hoverTimer=null;
+  for(const kind of ['wind','temp']){
+    const cv=el(kind==='wind'?'windGraph':'tempGraph');if(!cv)continue;
+    cv.style.touchAction='pan-y';
+    const move=e=>{const r=cv.getBoundingClientRect();clearTimeout(hoverTimer);hover={kind,x:e.clientX-r.left};render(kind)};
+    cv.addEventListener('pointermove',move);cv.addEventListener('pointerdown',move);
+    const leave=e=>{clearTimeout(hoverTimer);const clear=()=>{hover=null;render(kind)};if(e.pointerType==='mouse')clear();else hoverTimer=setTimeout(clear,2600)};
+    cv.addEventListener('pointerleave',leave);cv.addEventListener('pointercancel',leave);cv.addEventListener('pointerup',e=>{if(e.pointerType!=='mouse')leave(e)});
+  }
+  // Replace ONLY the chart renderer; all control, MQTT and settings logic remains untouched.
+  draw=function(id,data){if(id==='windGraph'||id==='tempGraph')render(id==='windGraph'?'wind':'temp');else previousDraw(id,data)};
+  ingest=function(t){
+    const dev=String(t.device||el('device').value.trim());
+    if(activeDevice!==dev){activeDevice=dev;samples=[];load()}
+    const tval=t.temperature_corrected_c??t.temperature_c;
+    const recv=Date.now();
+    if(samples.length && recv-samples[samples.length-1].receivedAt>20000){
+      samples.push({rpm:null,gust:null,temp:null,open:null,closed:null,conflict:false,receivedAt:recv-1});
+    }
+    syncRealLimits(t);
+    samples.push({rpm:asNumber(t.rpm),gust:asNumber(t.wind_gust_rpm),temp:asNumber(tval),
+      open:boolReed(t.reed_open_stable),closed:boolReed(t.reed_closed_stable),conflict:t.reed_conflict_confirmed===true,receivedAt:Date.now()});
+    if(samples.length>MAX_SAMPLES)samples.shift();
+    previousIngest(t);
+    if(typeof window.swgUpdateDiagnostic==='function')window.swgUpdateDiagnostic(t);
+    const windEl=el('windCloudApproval');
+    if(windEl){
+      const approved=t.wind_limits_approved===true;
+      const w=Number(t.wind_warning_rpm),c=Number(t.wind_critical_rpm);
+      windEl.textContent=approved?`ESP32 APPROVED locally: Warning ${w} RPM / Critical ${c} RPM · RF OFF`:
+        `ESP32 NOT APPROVED · Warning ${t.wind_warning_rpm??'NOT SET'} / Critical ${t.wind_critical_rpm??'NOT SET'} RPM · Local physical verification REQUIRED`;
+      windEl.className=approved?'notice safe':'notice';
+    }
+    renderBoth();updateReadout();
+  };
+  document.querySelectorAll('[data-gopt]').forEach(node=>node.addEventListener('change',()=>{
+    const [kind,key]=node.dataset.gopt.split('.');settings[kind][key]=node.checked;save();renderBoth();
+  }));
+  // Graph limit readouts are firmware-only; no browser-side numeric editing.
+  setInterval(()=>{if(samples.length){renderBoth();updateReadout();}},1000);
+  load();renderBoth();
+})();
+</script>
+<script>
+'use strict';
+// V0.7.11d Cloud Configuration: all editable AP forms mirrored through MQTT.
+// Important: this page only displays successful ESP32 ACKs; it cannot claim that
+// a command or parameter has been applied merely because MQTT publish succeeded.
+const CLOUD_FIELDS={
+  schedule:[
+    ['schedule_enable','เปิดใช้ตารางเวลา','boolean'],
+    ['schedule_start','เวลาเริ่ม (ตามนาฬิกา)','time'],
+    ['schedule_end','เวลาสิ้นสุด (ตามนาฬิกา)','time'],
+    ['schedule_days','วันที่อนุญาตให้เปิดร่ม','days',0,127],
+    ['temperature_enable','ใช้เงื่อนไขอุณหภูมิ','boolean'],
+    ['temperature_thresholds','อุณหภูมิ OPEN,CLOSE (°C เช่น 45,35) — เว้นว่างหากรอผล Logging','text'],
+    ['temperature_offset','ชดเชยอุณหภูมิ (°C)','number',-20,20,'0.1'],
+    ['wind_offset','ชดเชย RPM ลม (เพื่อวิเคราะห์)','number',-1000,1000,'0.1'],
+    ['hysteresis_min','Hysteresis ขั้นต่ำ (°C)','number',0.5,30,'0.1'],
+    ['open_delay','หน่วงเวลาเปิด (วินาที)','number',0,3600],
+    ['close_delay','หน่วงเวลาปิด (วินาที)','number',0,3600],
+    ['min_open','เปิดไว้อย่างน้อย (วินาที · สำรอง)','number',0,3600],
+    ['min_closed','ปิดไว้อย่างน้อย (วินาที · สำรอง)','number',0,3600],
+    ['wind_recovery','เวลาฟื้นตัวจากลม (วินาที · สำรอง)','number',0,3600],
+  ],
+  wind:[
+    ['limits_rpm','Wind Warning,Critical (RPM) — กรอกคู่หรือ CLEAR','text'],
+    ['mps_per_rpm','m/s per RPM · Optional calibration (กรอก CLEAR เพื่อลบ)','text'],
+    ['mps_intercept','m/s intercept · Display only','number',-30,30,'0.01'],
+    ['wind_offset','RPM Offset · Diagnostics only','number',-1000,1000,'0.1'],
+    ['recovery_sec','Hold below warning before recovery (sec)','number',0,3600],
+  ],
+  retry:[
+    ['retry_enable','เปิด Auto Retry (จำลองเท่านั้น)','boolean'],
+    ['max_attempts','พยายามสูงสุด รวมครั้งแรก','number',1,5],
+    ['verify_sec','รอยืนยัน Reed ปลายทาง (วินาที)','number',10,300],
+    ['gap_sec','ช่วงห่างก่อน Retry (วินาที)','number',3,120],
+    ['settle_ms','Reed ต้องนิ่ง (มิลลิวินาที)','number',100,5000],
+    ['repeat_block_sec','Cooldown คำสั่งทิศเดิม (วินาที)','number',0,300],
+  ],
+  oled:[
+    ['auto_sleep','ให้จอ OLED พักอัตโนมัติ','boolean'],
+    ['sleep_minutes','เวลารอก่อนดับจอ (นาที)','number',1,60],
+  ],
+  sheets:[
+    ['sync_enable','เปิดส่ง Google Sheets','boolean'],
+    ['events','ส่งบันทึกเหตุการณ์','boolean'],
+    ['telemetry','ส่งค่า RPM / อุณหภูมิเป็นระยะ','boolean'],
+    ['counters','ส่งตัวนับ OPEN / CLOSE','boolean'],
+    ['interval','ความถี่ในการส่ง Batch (วินาที)','number',30,86400],
+    ['batch','จำนวนแถวต่อ Batch สูงสุด','number',1,100],
+    ['retry_sec','รอ Retry เมื่อส่งไม่สำเร็จ (วินาที)','number',30,3600],
+    ['webapp_url','Google Apps Script Web App URL (/exec)','text'],
+    ['api_token','Token ใหม่ (เว้นว่าง = ใช้ค่าเดิม)','secret'],
+  ],
+  network:[
+    ['ap_hold','เปิด AP ค้าง (นาที; 0 = ไม่ปิด)','number',0,1440],
+    ['wifi_retry','ระยะ Retry Wi-Fi (วินาที)','number',5,300],
+    ['mqtt_retry','ระยะ Retry MQTT (วินาที)','number',5,300],
+    ['publish_sec','ความถี่ส่ง MQTT (วินาที)','number',1,300],
+    ['wifi_ssid','ชื่อ Wi-Fi (มีผลหลัง Restart)','text'],
+    ['wifi_password','รหัส Wi-Fi ใหม่ (เว้นว่าง = เดิม)','secret'],
+    ['mqtt_host','HiveMQ Hostname (มีผลหลัง Restart)','text'],
+    ['mqtt_port','HiveMQ Port (มีผลหลัง Restart)','number',1,65535],
+    ['mqtt_device','Device ID (มีผลหลัง Restart)','text'],
+    ['mqtt_user','ESP32 MQTT Username (มีผลหลัง Restart)','text'],
+    ['mqtt_password','ESP32 MQTT Password ใหม่ (เว้นว่าง = เดิม)','secret'],
+    ['mqtt_topic','Topic สำหรับส่ง Telemetry (มีผลหลัง Restart)','text'],
+    ['mqtt_enable','เปิด MQTT','boolean'],
+    ['mqtt_tls','ใช้ TLS กับ Broker','boolean'],
+    ['mqtt_remote','อนุญาต Manual ผ่าน Cloud','boolean'],
+    ['cloud_config_enabled','อนุญาตแก้ Parameters ผ่าน Cloud (Admin Key)','boolean'],
+    ['cloud_emergency_enabled','อนุญาต Emergency จำลองผ่าน Cloud (Admin Key)','boolean'],
+  ],
+  control:[
+    ['mode','Control mode (AUTO / MANUAL / EMERGENCY)','mode'],
+  ],
+};
+const cloudState={};
+const cloudInputs={};
+const cloudSaving={};
+const cloudPending=new Map();
+let cloudSeq=0;
+function cloudId(){return 'cfg'+Date.now().toString(36)+(++cloudSeq).toString(36)}
+function cloudConnected(){return !!client?.connected && !!subscriptionOK}
+function cloudLogStatus(s){const node=el('cfgStatus');node.textContent=s;log('[CLOUD CFG] '+s)}
+function cloudSend(topicSuffix,body,ack=true){
+  if(!cloudConnected())return Promise.reject(new Error('MQTT DISCONNECTED or NOT SUBSCRIBED'));
+  const id=cloudId();
+  const msg={device:el('device').value.trim(),id,ts:Math.floor(Date.now()/1000),...body};
+  // Only cfg/get and cfg/set carry the optional bootstrap secret. Never send
+  // it in ordinary OPEN/CLOSE/STOP requests, logs or telemetry.
+  if(topicSuffix==='/cfg/get'||topicSuffix==='/cfg/set'){
+    const adminKey=el('cloudAdminKey').value;
+    if(adminKey)msg.admin_key=adminKey;
+  }
+  return new Promise((resolve,reject)=>{
+    let timer=null;
+    if(ack){
+      timer=setTimeout(()=>{cloudPending.delete(id);reject(new Error('ACK_TIMEOUT (ESP32 did not reply; check firmware v0.7.11f and cfg topic ACL/subscription): '+topicSuffix+' '+(body.key||'')))},13000);
+      cloudPending.set(id,{resolve,reject,timer});
+    }
+    client.publish(base+topicSuffix,JSON.stringify(msg),{qos:1,retain:false},error=>{
+      if(error){if(timer)clearTimeout(timer);cloudPending.delete(id);reject(error)}
+      else if(!ack)resolve({result:'SENT'});
+    });
+  });
+}
+function cloudFieldCurrent(field,node){
+  if(field[2]==='days')return [...node.querySelectorAll('input[type=checkbox]')].reduce((v,n,i)=>v|(n.checked?1<<i:0),0);
+  if(field[2]==='boolean')return node.checked;
+  if(field[2]==='time'){const p=node.value.split(':');return p.length===2?(Number(p[0])*60+Number(p[1])):'';}
+  return node.value;
+}
+function cloudRenderForm(group){
+  const parent=el('cfg_'+group);parent.replaceChildren();cloudInputs[group]={};
+  for(const def of CLOUD_FIELDS[group]){
+    const [key,label,type,min,max,step]=def;
+    const line=document.createElement('label');line.className='cloud-config-field';
+    const t=document.createElement('span');t.textContent=label;line.append(t);
+    let input;
+    if(type==='days'){
+      input=document.createElement('div');input.className='cloud-days';
+      for(const [i,name] of ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].entries()){
+        const l=document.createElement('label');const b=document.createElement('input');
+        b.type='checkbox';b.dataset.bit=String(i);l.append(b,document.createTextNode(' '+name));input.append(l);
+      }
+    } else if(type==='mode'){
+      input=document.createElement('select');for(const mode of ['AUTO','MANUAL','EMERGENCY']){
+        const opt=document.createElement('option');opt.value=mode;opt.textContent=mode;input.append(opt);
+      }
+    } else {
+      input=document.createElement('input');
+      input.type=type==='boolean'?'checkbox':type==='number'?'number':type==='time'?'time':type==='secret'?'password':'text';
+      if(min!==undefined)input.min=min;
+      if(max!==undefined)input.max=max;
+      if(step!==undefined)input.step=step;
+      else if(type==='number')input.step='1';
+      input.autocomplete='off';
+      if(type==='secret')input.placeholder='Leave blank to keep saved secret';
+    }
+    input.dataset.configKey=key;line.append(input);parent.append(line);cloudInputs[group][key]=input;
+  }
+}
+for(const g of Object.keys(CLOUD_FIELDS))cloudRenderForm(g);
+function cloudApplyState(group,values){
+  if(!cloudInputs[group])return;
+  cloudState[group]={...cloudState[group],...values};
+  if(cloudSaving[group])return; // preserve unsaved user edits during multi-key Save
+  for(const field of CLOUD_FIELDS[group]){
+    const [key,,type]=field, input=cloudInputs[group][key];
+    if(!input||type==='secret'||!(key in values))continue;
+    const value=values[key];
+    if(type==='days'){
+      const mask=Number(value)||0;
+      input.querySelectorAll('input[type=checkbox]').forEach((cb,i)=>cb.checked=!!(mask&(1<<i)));
+    }else if(type==='boolean')input.checked=value===true;
+    else if(type==='time' && value!==null){const min=Number(value);input.value=Number.isFinite(min)?String(Math.floor(min/60)).padStart(2,'0')+':'+String(min%60).padStart(2,'0'):'';}
+    else input.value=value===null?'':String(value);
+  }
+  el('cfgView').textContent='Last read: '+new Date().toLocaleTimeString()+' / '+Object.keys(cloudState).join(', ');
+  if(group==='network'){
+    el('cfgArmed').textContent=(values.cloud_config_enabled===true?'CLOUD SETTINGS ENABLED':'CLOUD NOT ARMED: ADMIN KEY REQUIRED')+
+     ' · '+(values.cloud_emergency_enabled===true?'EMERGENCY SIMULATION ARMED':'EMERGENCY CLOUD OFF');
+  }
+  if(group==='control'){
+    if(values.mode)el('mode').textContent=values.mode;
+    if(values.safety_reason)el('safety').textContent=values.safety_reason;
+  }
+}
+async function cloudRead(group='all'){
+  cloudLogStatus('Reading '+group+' from ESP32…');
+  const result=await cloudSend('/cfg/get',{group});
+  if(result.result!=='READ_OK')throw new Error('Get blocked: '+result.result);
+  cloudLogStatus('Read request ACK: OK. Waiting for state updates…');
+}
+async function cloudSave(group){
+  const start=cloudState[group];if(!start){cloudLogStatus('READ '+group+' first');return}
+  if(!cloudConnected()){cloudLogStatus('Connect to HiveMQ first');return}
+  const button=el('save_'+group);button.disabled=true;cloudSaving[group]=true;
+  let saved=0,staged=0;
+  try{
+    for(const f of CLOUD_FIELDS[group]){
+      const key=f[0],type=f[2],node=cloudInputs[group][key];
+      let value=cloudFieldCurrent(f,node);
+      if(type==='secret'){
+        if(!value)continue;
+      } else if(group==='schedule'&&key==='temperature_thresholds'){
+        if(String(value||'')===String(start[key]||''))continue;
+        if(String(value).trim()==='')value='CLEAR';
+      } else if(group==='wind' && (key==='limits_rpm'||key==='mps_per_rpm')){
+        value=String(value??'').trim();
+        if(value===String(start[key]??''))continue;
+        if(value==='')throw new Error('Wind '+key+': use CLEAR to clear a saved value');
+        if(key==='limits_rpm'&&value.toUpperCase()!=='CLEAR'){
+          const parts=value.split(',').map(x=>x.trim());
+          if(parts.length!==2 || parts.some(x=>!x||!Number.isFinite(Number(x))) ||
+             Number(parts[0])<1 || Number(parts[1])<=Number(parts[0]) || Number(parts[1])>100000)
+            throw new Error('Wind Limits: WARNING,CRITICAL must be positive, increasing RPM');
+          value=parts.join(',');
+        }
+        if(key==='mps_per_rpm' && value.toUpperCase()!=='CLEAR' &&
+           !(Number.isFinite(Number(value)) && Number(value)>=0.000001 && Number(value)<=5))
+          throw new Error('m/s per RPM requires reference calibration 0.000001..5');
+        if(value.toUpperCase()==='CLEAR')value='CLEAR';
+      } else if(String(value)===String(start[key]))continue;
+      if(type==='number' && (value===''||!node.checkValidity()))throw new Error('INVALID INPUT: '+key);
+      if(type==='mode' && value==='EMERGENCY'){
+        if(!confirm('Enable CLOUD EMERGENCY SIMULATION? RF/Motor stay OFF. Local AP must have armed it.'))return;
+      }
+      if(group==='network'&&['wifi_ssid','wifi_password','mqtt_host','mqtt_port','mqtt_device','mqtt_user','mqtt_password','mqtt_topic','mqtt_enable','mqtt_tls'].includes(key)){
+        if(!confirm('Changing '+key+' will take effect after reboot. Incorrect credentials can disconnect the Cloud. Local AP is the recovery route. Continue?'))return;
+      }
+      cloudLogStatus('Save '+group+'/'+key+' (awaiting ESP32 ACK)…');
+      const response=await cloudSend('/cfg/set',{
+        group,key,value:String(value),confirm:(key==='mode'&&value==='EMERGENCY')?'YES':''});
+      const result=response.result||'NO_RESULT';
+      if(result==='REBOOT_REQUIRED')staged++;
+      else if(result.startsWith('SAVED')||result==='UNCHANGED')saved++;
+      else throw new Error('ESP32 BLOCKED '+group+'/'+key+': '+result);
+      if(type==='secret')node.value='';
+      start[key]=value;
+    }
+    cloudLogStatus('ESP32 confirmed '+saved+' settings; '+staged+' staged until reboot.');
+    await cloudRead(group);
+  }catch(e){cloudLogStatus('SAVE STOPPED: '+e.message)}finally{cloudSaving[group]=false;button.disabled=false;if(cloudState[group])cloudApplyState(group,cloudState[group])}
+}
+for(const group of Object.keys(CLOUD_FIELDS)){
+  el('save_'+group).onclick=()=>cloudSave(group);
+  el('read_'+group).onclick=()=>cloudRead(group).catch(e=>cloudLogStatus(e.message));
+}
+el('readAll').onclick=()=>cloudRead().catch(e=>cloudLogStatus(e.message));
+el('readCloudKey').onclick=()=>cloudRead().catch(e=>cloudLogStatus('Authorization/Read: '+e.message));
+el('enableCloudManual').onclick=async()=>{
+  const key=el('cloudAdminKey').value;
+  if(!cloudConnected()){cloudLogStatus('กรุณาเชื่อมต่อ HiveMQ ก่อน');return;}
+  const armed=cloudState.network?.cloud_config_enabled===true || telemetry?.mqtt_cloud_config_enabled===true;
+  if(!armed && (key.length<8||key.length>96)){
+    cloudLogStatus('กรอก Cloud Admin Key 8–96 ตัวอักษรที่ตั้งไว้ใน ESP32 เพื่ออนุญาตครั้งแรก');return;
+  }
+  if(!confirm('เปิดสิทธิ์สั่งงานจำลองผ่าน Cloud เท่านั้น? จะไม่เปลี่ยน AUTO/MANUAL/EMERGENCY และ RF/Motor ยังปิดอยู่'))return;
+  const btn=el('enableCloudManual');btn.disabled=true;
+  try{
+    const changes=[];
+    if(!armed)changes.push({group:'network',key:'cloud_config_enabled',value:'true'});
+    if(telemetry?.mqtt_remote_enabled!==true)changes.push({group:'network',key:'mqtt_remote',value:'true'});
+    for(const item of changes){
+      cloudLogStatus('กำลังขอสิทธิ์ '+item.key+' จาก ESP32…');
+      const ack=await cloudSend('/cfg/set',item);
+      if(!String(ack.result||'').startsWith('SAVED'))throw Error(item.key+': '+ack.result);
+    }
+    cloudLogStatus('เปิดสิทธิ์ Cloud แล้ว ✅ เลือก AUTO, MANUAL หรือ EMERGENCY แยกต่างหากในหน้า ควบคุม');
+    el('controlResult').textContent='สิทธิ์ Cloud เปิดแล้ว · กรุณาเลือกโหมดที่ต้องการ';
+    await cloudRead('network');await cloudRead('control');
+  }catch(e){cloudLogStatus('เปิดสิทธิ์ไม่สำเร็จ: '+e.message);el('controlResult').textContent='เปิดสิทธิ์ไม่สำเร็จ: '+e.message;}
+  finally{btn.disabled=false;}
+};
+async function cloudAction(key){
+  if(!confirm('Confirm '+key+'? Monitor/Simulation only; no RF/Motor output.'))return;
+  try{
+    const r=await cloudSend('/cfg/set',{group:'system',key,value:'1',confirm:'YES'});
+    cloudLogStatus(key+': '+r.result);
+  }catch(e){cloudLogStatus(e.message)}
+}
+el('testSheetCloud').onclick=()=>cloudAction('sheet_test');
+el('resetRetryCloud').onclick=()=>cloudAction('reset_retry');
+el('rebootCloud').onclick=()=>{if(confirm('RESTART ESP32? Active Cloud session will drop. Confirm again?'))cloudAction('reboot')};
+function swgCloudAttach(session){
+  session.on('connect',()=>{
+    setTimeout(()=>{if(session===client)cloudRead().catch(e=>cloudLogStatus(e.message))},850);
+  });
+  session.on('message',(topic,payload)=>{
+    if(!base)return;
+    if(topic===base+'/cfg/ack'||topic===base+'/ack'){
+      let data;try{data=JSON.parse(payload.toString())}catch(_){return}
+      if(topic===base+'/cfg/ack'){
+        const r=String(data.result||'UNKNOWN');
+        el('cfgAck').textContent='Last Cloud Config ACK: '+r+' · '+String(data.group||'')+'/'+String(data.key||'')+' · '+new Date().toLocaleTimeString();
+      }
+      const entry=cloudPending.get(data.id);
+      if(entry){clearTimeout(entry.timer);cloudPending.delete(data.id);entry.resolve(data)}
+    }else if(topic.startsWith(base+'/cfg/state/')){
+      try{const data=JSON.parse(payload.toString());cloudApplyState(data.group,data.values||{})}
+      catch(e){cloudLogStatus('State parse error '+e.message)}
+    }
+  });
+}
+// Control buttons: cloud mode and remote permissions are independent. No remote
+// physical movement is possible because the firmware's RF/Motor are disabled.
+updateButtons=function(){
+  const connectedToDevice=!!client?.connected && !!status?.online && !!subscriptionOK &&
+    !!lastRx && Date.now()-lastRx<20000;
+  const remote=telemetry?.mqtt_remote_enabled===true;
+  const mode=telemetry?.control_mode||status?.mode;
+  const emerg=telemetry?.mqtt_cloud_emergency_enabled===true &&
+              cloudState.network?.cloud_emergency_enabled===true;
+  const manual=mode==='MANUAL';
+  const emergAllowed=mode==='EMERGENCY'&&emerg;
+  el('openBtn').disabled=!(connectedToDevice&&remote&&(manual&&status?.openAllowed===true||emergAllowed));
+  el('closeBtn').disabled=!(connectedToDevice&&remote&&(manual||emergAllowed));
+  el('stopBtn').disabled=!(connectedToDevice&&remote);
+  el('remote').textContent=remote?'ENABLED':'DISABLED';
+  const cause=!client?.connected?'Browser broker disconnected':
+    !connectedToDevice?'ESP32 status/telemetry missing or stale':
+    !remote?'Cloud Manual disabled: enter Admin Key and press ENABLE CLOUD MANUAL, or enable it in local AP':
+    mode==='AUTO'?'Select MANUAL (or armed EMERGENCY simulation) in Cloud Settings':
+    mode==='EMERGENCY'&&!emerg?'Cloud emergency requires admin key authorization in Network settings':
+    manual&&status?.openAllowed!==true?'OPEN blocked by Wind/Schedule/Safety; CLOSE/STOP simulation remain available':
+    emergAllowed?'Emergency SIMULATION: hold OPEN/CLOSE for 3 seconds (RF OFF)':'Manual commands available (RF OFF)';
+  el('notice').textContent=cause;
+};
+let cloudHold=null;
+async function cloudSendMotion(action){
+  if(!cloudConnected())return;
+  if(action==='OPEN' && !confirm('OPEN simulation request (all normal safety checks apply). Continue?'))return;
+  if(action==='CLOSE' && !confirm('CLOSE simulation request?'))return;
+  try{
+    const id=cloudId();
+    const cmd={device:el('device').value.trim(),id,action,ts:Math.floor(Date.now()/1000)};
+    await new Promise((resolve,reject)=>client.publish(base+'/cmd',JSON.stringify(cmd),{qos:1,retain:false},error=>error?reject(error):resolve()));
+    log('SENT '+action+' / awaiting ESP32 ACK');
+  }catch(e){log('MQTT TX failed '+e.message)}
+}
+// Preserve pointer-up behavior of the original browser buttons, but make the
+// server verify elapsed hold time and a one-time nonce for emergency simulation.
+async function cloudStartHold(action,element,pointerId){
+  if(cloudHold)return;
+  const hold={action,alive:true,nonce:'',timer:null,element};cloudHold=hold;
+  el('notice').textContent='Holding '+action+'… request validated by ESP32 (3 seconds)';
+  try{
+    if(element.setPointerCapture && pointerId!==undefined)element.setPointerCapture(pointerId);
+    const response=await cloudSend('/cmd',{action:'E_HOLD_START_'+action});
+    if(response.result!=='HOLD_STARTED'||!response.nonce)throw new Error('ESP32 did not arm Emergency Hold: '+response.result);
+    if(!hold.alive||cloudHold!==hold)return;
+    hold.nonce=response.nonce;
+    el('holdProgressWrap').hidden=false;el('holdProgressText').textContent='กำลังกดค้าง '+action+' — อย่าเพิ่งปล่อย';
+    el('holdBar').style.transition='none';el('holdBar').style.width='0%';
+    requestAnimationFrame(()=>{el('holdBar').style.transition='width 3.2s linear';el('holdBar').style.width='100%';});
+    hold.timer=setTimeout(async()=>{
+      if(!hold.alive||cloudHold!==hold)return;
+      cloudHold=null;el('holdProgressWrap').hidden=true;
+      try{
+        const r=await cloudSend('/cmd',{action:'E_HOLD_COMMIT_'+action,nonce:hold.nonce});
+        el('notice').textContent='ESP32 EMERGENCY ACK: '+r.result+' / RF MOTOR OFF';
+      }catch(e){el('notice').textContent='Emergency Hold failed: '+e.message}
+    },3200);
+  }catch(e){if(cloudHold===hold)cloudHold=null;el('holdProgressWrap').hidden=true;el('notice').textContent=e.message}
+}
+function cloudCancelHold(){
+  if(!cloudHold)return;
+  const h=cloudHold;cloudHold=null;h.alive=false;
+  if(h.timer)clearTimeout(h.timer);el('holdProgressWrap').hidden=true;
+  if(client?.connected)cloudSend('/cmd',{action:'E_HOLD_CANCEL'}).catch(()=>{});
+  el('notice').textContent='Emergency hold cancelled: NO COMMAND';
+}
+for(const act of ['OPEN','CLOSE']){
+  const btn=el(act.toLowerCase()+'Btn');
+  btn.onclick=()=>{};
+  btn.addEventListener('pointerdown',e=>{
+    if(btn.disabled)return;
+    if(telemetry?.control_mode==='EMERGENCY'){
+      e.preventDefault();cloudStartHold(act,btn,e.pointerId);
+    }
+  });
+  for(const name of ['pointerup','pointercancel','pointerleave']){
+    btn.addEventListener(name,()=>{if(cloudHold)cloudCancelHold()});
+  }
+  btn.addEventListener('click',e=>{
+    if(btn.disabled)return;
+    if(telemetry?.control_mode==='EMERGENCY')e.preventDefault();
+    else cloudSendMotion(act);
+  });
+}
+el('stopBtn').onclick=()=>cloudSendMotion('STOP');
+setInterval(()=>{updateButtons()},4000);
+
+
+// HMI v1.0 — operator-first presentation. Firmware MQTT protocol remains unchanged.
+const HMI_TABS=['overview','control','settings','diagnostics'];
+function setTab(tab){
+  if(!HMI_TABS.includes(tab))tab='overview';
+  document.querySelectorAll('[data-page]').forEach(n=>n.hidden=n.dataset.page!==tab);
+  document.querySelectorAll('[data-nav]').forEach(n=>{
+    const current=n.dataset.nav===tab;n.classList.toggle('selected',current);
+    n.setAttribute('aria-current',current?'page':'false');
+  });
+  if(tab==='overview'){draw('windGraph',historyWind);draw('tempGraph',historyTemp)}
+  if(tab==='settings'&&cloudConnected()&&!cloudState.schedule){cloudRead().catch(e=>cloudLogStatus(e.message))}
+  if(tab==='control'&&cloudConnected()&&!cloudState.control){cloudRead('control').catch(e=>cloudLogStatus(e.message))}
+  window.scrollTo({top:0,behavior:'instant'});
+}
+document.querySelectorAll('[data-nav]').forEach(b=>b.addEventListener('click',()=>setTab(b.dataset.nav)));
+document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>setTab(b.dataset.goto)));
+function hmiNotice(text,type='info'){
+  const bar=el('hmiToast');bar.textContent=text;bar.className='toast show '+type;
+  bar.setAttribute('role','status');
+}
+let modePending=false;
+const modeRadios=[...document.querySelectorAll('[name=operatorMode]')];
+function pickedMode(){return modeRadios.find(r=>r.checked)?.value||'';}
+function refreshModePicker(){
+  const actual=telemetry?.control_mode||cloudState.control?.mode||null;
+  el('currentMode').textContent=actual||'ยังไม่ทราบ';
+  el('controlMode').textContent=actual||'--';
+  if(!modePending && actual){
+    const r=modeRadios.find(r=>r.value===actual);if(r)r.checked=true;
+  }
+  document.querySelectorAll('.mode-choice').forEach(n=>n.classList.toggle('chosen',n.querySelector('input')?.checked));
+  const target=pickedMode();
+  const change=!!actual&&target!==actual;
+  el('applyMode').disabled=!cloudConnected()||!change||el('applyMode').dataset.busy==='1';
+  el('modeSelectionMessage').textContent=actual?
+    change?'เปลี่ยนจาก '+actual+' เป็น '+target+' · จะส่งเฉพาะค่า Control Mode และรอ ESP32 ยืนยัน':'เลือกอยู่ที่ '+actual+' แล้ว ไม่จำเป็นต้องบันทึกซ้ำ':
+    'กำลังอ่านสถานะจริงจาก ESP32';
+  el('emergencyTip').hidden=target!=='EMERGENCY';
+}
+modeRadios.forEach(r=>r.addEventListener('change',()=>{modePending=true;refreshModePicker()}));
+const oldCloudApplyState=cloudApplyState;
+cloudApplyState=function(group,values){
+  oldCloudApplyState(group,values);
+  if(group==='control'){modePending=false;refreshModePicker();}
+  if(group==='network')updateOperatorActions();
+};
+const oldIngest=ingest;
+ingest=function(t){oldIngest(t);updateOperatorActions();refreshModePicker();};
+const oldConnected=connected;
+connected=function(v){oldConnected(v);updateOperatorActions();refreshModePicker();};
+function updateOperatorActions(){
+  const online=!!client?.connected && !!subscriptionOK && !!status?.online && !!lastRx && Date.now()-lastRx<20000;
+  const remote=telemetry?.mqtt_remote_enabled===true;
+  const em=telemetry?.mqtt_cloud_emergency_enabled===true || cloudState.network?.cloud_emergency_enabled===true;
+  el('connectionSummary').textContent=!client?.connected?'ยังไม่เชื่อม Cloud':!online?'เชื่อม Broker แล้ว · รอข้อมูลอุปกรณ์':'ออนไลน์ · รับข้อมูล ESP32';
+  el('remoteStatus').textContent=remote?'เปิดสิทธิ์แล้ว':'ยังไม่อนุญาต';
+  el('emergencyStatus').textContent=em?'เปิดให้ใช้ Emergency จำลอง':'Emergency Cloud ยังปิด';
+  el('quickWind').textContent=telemetry?.safety_reason||'รอข้อมูล';
+  el('quickPos').textContent=telemetry?.position||'--';
+  el('safetyHelp').textContent=(telemetry?.safety_reason==='WIND_LIMIT_PENDING')?
+   'ยังไม่อนุมัติค่า Wind Limit จึงบล็อก OPEN ใน Manual ปกติ นี่เป็นมาตรการป้องกัน ไม่ใช่ปุ่มเสีย':
+   'คำสั่งปกติต้องผ่านเงื่อนไข Safety และได้รับ ACK จาก ESP32 ก่อน';
+  const mode=telemetry?.control_mode;
+  el('emergencyInstructions').hidden=mode!=='EMERGENCY';
+  el('normalInstructions').hidden=mode==='EMERGENCY';
+  el('emergencyGate').textContent=em?'Emergency จำลองได้รับอนุญาตแล้ว':'Emergency ยังไม่ได้รับอนุญาต ต้องใช้ Admin Key เปิดสิทธิ์ก่อน';
+  const canArm=!!client?.connected&&!!subscriptionOK;
+  el('armEmergency').disabled=!canArm;
+  el('enableCloudManual').disabled=!canArm;
+  el('controlAccessHelp').textContent=!client?.connected?'กด “เชื่อมต่อ Cloud” มุมขวาบนก่อน':
+    remote?'พร้อมเลือกโหมดและใช้คำสั่งจำลองเมื่อผ่านเงื่อนไข':'กด “เปิดสิทธิ์ควบคุมผ่าน Cloud” ด้านล่างก่อน';
+}
+const oldUpdateButtons=updateButtons;
+updateButtons=function(){oldUpdateButtons();updateOperatorActions();};
+el('applyMode').addEventListener('click',async()=>{
+  const desired=pickedMode();const actual=telemetry?.control_mode||cloudState.control?.mode;
+  if(!desired||desired===actual)return;
+  if(!cloudConnected()){el('controlResult').textContent='เชื่อม HiveMQ ก่อน';return;}
+  const emergencyAllowed=telemetry?.mqtt_cloud_emergency_enabled===true || cloudState.network?.cloud_emergency_enabled===true;
+  if(desired==='EMERGENCY'&&!emergencyAllowed){
+    el('controlResult').textContent='ยังไม่อนุญาต Emergency: ใช้ Admin Key กด “อนุญาต Emergency จำลอง” ก่อน';return;
+  }
+  if(!confirm(desired==='EMERGENCY'?
+    'ยืนยันเปลี่ยนเป็น EMERGENCY (จำลองเท่านั้น)? คำสั่ง OPEN/CLOSE ข้ามเงื่อนไขสำหรับ Intent แต่ต้องกดค้าง 3 วินาที และ RF/Motor ยังปิดอยู่':
+    'ยืนยันเปลี่ยนโหมดจาก '+actual+' เป็น '+desired+' ? (เปลี่ยนเฉพาะ Control Mode; พารามิเตอร์อื่นไม่ถูกแก้ไข)'))return;
+  const btn=el('applyMode');btn.dataset.busy='1';btn.disabled=true;
+  el('controlResult').textContent='กำลังรอ ESP32 ยืนยันเปลี่ยนโหมด '+desired+'…';
+  try{
+    const reply=await cloudSend('/cfg/set',{group:'control',key:'mode',value:desired,
+       confirm:desired==='EMERGENCY'?'YES':''});
+    if(!String(reply.result||'').startsWith('SAVED'))throw Error(reply.result||'ESP32 ปฏิเสธ');
+    el('controlResult').textContent='ESP32 ยืนยัน: เปลี่ยนเป็น '+desired+' แล้ว (RF/Motor OFF)';
+    hmiNotice('เปลี่ยนโหมดสำเร็จ: '+desired,'ok');modePending=false;
+    await cloudRead('control');
+  }catch(e){el('controlResult').textContent='เปลี่ยนโหมดไม่สำเร็จ: '+e.message;hmiNotice('เปลี่ยนโหมดไม่สำเร็จ · '+e.message,'error');}
+  finally{delete btn.dataset.busy;refreshModePicker();}
+});
+el('armEmergency').addEventListener('click',async()=>{
+  const key=el('cloudAdminKey').value;
+  if(key.length<8||key.length>96){el('controlResult').textContent='กรอก Cloud Admin Key 8–96 ตัวอักษร (เหมือนที่ตั้งใน Firmware)';return;}
+  if(!cloudConnected()){el('controlResult').textContent='เชื่อม HiveMQ ก่อน';return;}
+  if(!confirm('อนุญาต EMERGENCY SIMULATION จากระยะไกล? ไม่เปิด RF/Motor จริง และการเปลี่ยนโหมดยังต้องยืนยันแยกต่างหาก'))return;
+  const b=el('armEmergency');b.disabled=true;
+  el('controlResult').textContent='กำลังเปิดสิทธิ์ Emergency โดยรอ ACK จาก ESP32…';
+  try{
+    const r=await cloudSend('/cfg/set',{group:'network',key:'cloud_emergency_enabled',value:'true'});
+    if(!String(r.result||'').startsWith('SAVED'))throw Error(r.result||'ESP32 ปฏิเสธ');
+    el('controlResult').textContent='อนุญาต Emergency จำลองแล้ว · เลือก EMERGENCY และกด “ยืนยันเปลี่ยนโหมด” ต่อ';
+    hmiNotice('เปิดสิทธิ์ Emergency จำลองสำเร็จ','ok');
+    await cloudRead('network');
+  }catch(e){el('controlResult').textContent='เปิด Emergency ไม่สำเร็จ: '+e.message;hmiNotice('เปิด Emergency ไม่สำเร็จ','error');}
+  finally{b.disabled=false;updateOperatorActions();}
+});
+// A section Save modifies only fields that changed inside that section.
+for(const group of ['schedule','wind','retry','oled','sheets','network']){
+  const btn=el('discard_'+group);
+  btn.addEventListener('click',()=>{
+    const values=cloudState[group];if(!values){cloudLogStatus('อ่านค่า '+group+' จาก ESP32 ก่อน');return;}
+    cloudSaving[group]=false;cloudApplyState(group,values);
+    hmiNotice('ยกเลิกการแก้ไขที่ยังไม่บันทึกในหมวดนี้แล้ว','info');
+  });
+  el('save_'+group).addEventListener('click',()=>{setTab('settings')});
+}
+// Human-readable ACK meanings; separate MQTT send from ESP32 confirmation.
+const oldCloudLogStatus=cloudLogStatus;
+cloudLogStatus=function(s){oldCloudLogStatus(s);el('settingsResult').textContent=s;};
+let rememberedConfigAck='';
+setInterval(()=>{
+  updateOperatorActions();refreshModePicker();
+  const x=el('cfgAck').textContent;
+  if(x!==rememberedConfigAck){rememberedConfigAck=x;el('controlAck').textContent=x;}
+},1500);
+// Initial UI state: no demo/fake live readings.
+setTab('overview');updateOperatorActions();refreshModePicker();
+</script>
+<script>
+// V0.7.14 pre-CC1101 diagnostic panel. Read-only from ESP32 MQTT.
+(() => {
+  const rows=document.getElementById('swgDiagRows');
+  const overall=document.getElementById('swgDiagOverall');
+  const banner=document.getElementById('preRfBanner');
+  let latest=null;
+  function render(){
+    if(!rows||!overall||!banner)return;
+    const t=latest||{};
+    const fresh=!!client?.connected&&!!lastRx&&Date.now()-lastRx<=20000;
+    const entries=[];
+    const add=(level,label,reason)=>entries.push({level,label,reason});
+    const test=(field,label)=>{
+      if(typeof t[field]!=='boolean')add('NO DATA',label,'ESP32 ไม่ส่งค่า — Firmware ไม่รองรับ / ขาดการเชื่อมต่อ');
+      else if(t[field])add('PASS',label,'ESP32 ยืนยัน');
+      else add('PENDING',label,'ยังไม่ผ่าน — ต้องตั้งค่าหรือทดสอบจริง');
+    };
+    test('cpr_calibrated','Encoder CPR Calibration');
+    test('rtc_valid','DS3231 RTC / เวลา');
+    test('temperature_valid','DS18B20 Sensor');
+    test('temp_logic_enabled','Temperature AUTO Logic');
+    test('temp_thresholds_configured','Temperature OPEN/CLOSE Thresholds');
+    test('schedule_enabled','Schedule Enabled');
+    test('schedule_configured','Schedule operator configuration (not factory illustration)');
+    test('wind_reference_verified','Wind reference verification (operator attestation)');
+    test('wind_limits_approved','Wind RPM Calibration / Safety Approval');
+    if(t.wind_limits_approved!==true||t.wind_warning_rpm==null||t.wind_critical_rpm==null)
+      add('PENDING','Wind Warning/Critical RPM','Firmware ยังไม่มีค่า Limit จริงที่อนุมัติ — ห้ามใช้ค่า Browser แทน');
+    else add('PASS','Wind Warning/Critical RPM',String(t.wind_warning_rpm)+' / '+String(t.wind_critical_rpm)+' RPM');
+    if(t.reed_conflict_confirmed===true||t.reed_open_stable===true&&t.reed_closed_stable===true)
+      add('FAULT','Reed OPEN/CLOSED','เซนเซอร์สองตัว Active พร้อมกัน');
+    else if(typeof t.reed_open_stable!=='boolean'||typeof t.reed_closed_stable!=='boolean')
+      add('NO DATA','Reed state','ESP32 ไม่ส่งสถานะ');
+    else if(t.reed_unknown_confirmed===true)
+      add('OBSERVE','Reed UNKNOWN','ทั้งคู่ OFF; อาจกำลังเคลื่อนที่ ต้องตรวจ timeout และจุดปลายทาง');
+    else add('PASS','Reed input integrity','ได้รับค่า Debounced Stable; ยังต้องทดสอบปลายทั้งสองตำแหน่ง');
+    if(t.sd_write_error===true)add('FAULT','SD Card Logging','ESP32 รายงานข้อผิดพลาดการเขียน');
+    else test('sd_ready','SD Card availability');
+    add('INFO','Google Sheets',t.gsheet_enabled===true?'เปิดตาม ESP32; ตรวจ ACK/queue อีกครั้ง':t.gsheet_enabled===false?'ปิดตาม ESP32':'ไม่มีข้อมูลยืนยัน');
+    add('INFO','ESP32 loop timing',Number.isFinite(t.loop_max_gap_ms)?'Max '+t.loop_max_gap_ms+' ms · >250ms stalls '+(t.loop_long_gap_count??'--')+' · Last Sheets HTTP '+(t.sheet_http_duration_ms??'--')+' ms':'No timing telemetry');
+    if(!fresh)add('STALE','MQTT Live Telemetry','ไม่ได้รับค่าล่าสุดใน 20 วินาที / Broker offline');
+    else add('PASS','MQTT Live Telemetry','เชื่อมต่อและรับค่าจาก ESP32');
+    add('MANUAL TEST','Reed movement / Emergency stop','ไม่สามารถรับรองจาก Snapshot ต้องยืนยันหน้างานก่อนเปิดใช้ CC1101');
+    add('RF OFF','CC1101 / RF Output','ยังไม่ติดตั้ง/ไม่เปิดใช้งานใน Firmware นี้');
+    const blocking=entries.some(x=>['FAULT','STALE','PENDING','NO DATA'].includes(x.level));
+    const top=!latest?'WAITING FOR ESP32 — NO DATA':!fresh?'NOT READY — ESP32 TELEMETRY STALE':blocking?'NOT READY FOR CC1101 — SETTINGS / TEST REQUIRED':'MONITORING OK — PHYSICAL RF SAFETY TESTS STILL REQUIRED';
+    overall.textContent=top;banner.textContent=top;
+    overall.className='notice'+(blocking||!latest?'':' safe');
+    banner.className='notice'+(blocking||!latest?'':' safe');
+    const clr={'PASS':'#68dfb7','PENDING':'#ffcc72','NO DATA':'#ffcc72','OBSERVE':'#ffcc72','FAULT':'#ff8991','STALE':'#ff8991','INFO':'#9bbde0','MANUAL TEST':'#ffcc72','RF OFF':'#9bbde0'};
+    rows.replaceChildren();
+    for(const item of entries){
+      const d=document.createElement('div');d.style.cssText='display:flex;align-items:flex-start;gap:9px;border-bottom:1px solid #36516b;padding:5px 0';
+      const flag=document.createElement('b');flag.style.cssText='flex:0 0 90px;font-size:12px;color:'+clr[item.level];flag.textContent=item.level;
+      const detail=document.createElement('span');detail.textContent=item.label+' — '+item.reason;
+      d.append(flag,detail);rows.append(d);
+    }
+  }
+  window.swgUpdateDiagnostic=t=>{latest=t;render()};
+  setInterval(render,1000);
+  render();
+})();
+</script>
+<script>
+'use strict';
+// HMI v1.3 HUD visuals — READ-ONLY presentation layer.
+// Reads the existing `telemetry` object and on-screen text only. It never publishes MQTT,
+// never changes control/safety state, and never edits configuration.
+(()=>{
+  const NS='http://www.w3.org/2000/svg';
+  const R=40,C=2*Math.PI*R,ARC=C*0.75; // 270° sweep
+  const num=v=>v===null||v===undefined||v===''?null:(Number.isFinite(Number(v))?Number(v):null);
+  function svg(tag,attrs){const n=document.createElementNS(NS,tag);for(const k in attrs)n.setAttribute(k,attrs[k]);return n}
+  function makeGauge(id,colorA,colorB){
+    const s=svg('svg',{viewBox:'0 0 100 100',class:'hud-gauge','aria-hidden':'true'});
+    const defs=svg('defs',{});const g=svg('linearGradient',{id:'hg-'+id,x1:'0',y1:'1',x2:'1',y2:'0'});
+    g.append(svg('stop',{offset:'0','stop-color':colorA}),svg('stop',{offset:'1','stop-color':colorB}));defs.append(g);s.append(defs);
+    const rot='rotate(135 50 50)';
+    s.append(svg('circle',{cx:50,cy:50,r:R,class:'hg-track',transform:rot,'stroke-dasharray':ARC+' '+C}));
+    const val=svg('circle',{cx:50,cy:50,r:R,class:'hg-val',transform:rot,stroke:'url(#hg-'+id+')','stroke-dasharray':'0 '+C});
+    s.append(val);
+    const ticks=svg('g',{class:'hg-ticks'});s.append(ticks);
+    const pct=svg('text',{x:50,y:56,class:'hg-pct','text-anchor':'middle'});pct.textContent='--';s.append(pct);
+    return {s,val,ticks,pct};
+  }
+  function setTicks(g,list){
+    g.ticks.replaceChildren();
+    for(const [f,col] of list){
+      if(!(f>=0&&f<=1))continue;
+      const a=(135+270*f)*Math.PI/180;
+      g.ticks.append(svg('line',{x1:50+(R-9)*Math.cos(a),y1:50+(R-9)*Math.sin(a),x2:50+(R+7)*Math.cos(a),y2:50+(R+7)*Math.sin(a),stroke:col,'stroke-width':3,'stroke-linecap':'round'}));
+    }
+  }
+  function setVal(g,f,state,label){
+    const ok=Number.isFinite(f);f=ok?Math.max(0,Math.min(1,f)):0;
+    g.val.setAttribute('stroke-dasharray',(ARC*f).toFixed(1)+' '+C);
+    g.s.dataset.state=ok?state:'idle';g.pct.textContent=ok?label:'--';
+  }
+  const gauges={};
+  for(const [key,a,b] of [['rpm','#2fb7e8','#67f0d8'],['gust','#f0a548','#ffd98a'],['temp','#46b4ff','#ff9e76']]){
+    const span=document.getElementById(key);const card=span&&span.closest('.card');if(!card)continue;
+    card.classList.add('hud-card');const g=makeGauge(key,a,b);card.append(g.s);gauges[key]=g;
+  }
+  // Umbrella pictogram for position card.
+  const roof=document.getElementById('roof');const roofCard=roof&&roof.closest('.card');let umb=null;
+  if(roofCard){
+    roofCard.classList.add('hud-card');
+    umb=svg('svg',{viewBox:'0 0 100 100',class:'hud-umb','aria-hidden':'true'});
+    umb.innerHTML='<g class="u-open"><path d="M10 50 Q50 6 90 50 Q80 43 70 50 Q60 43 50 50 Q40 43 30 50 Q20 43 10 50Z"/><path class="u-rib" d="M50 13 L30 50 M50 13 L50 50 M50 13 L70 50"/></g>'+
+      '<g class="u-closed"><path d="M50 12 L60 58 Q50 62 40 58Z"/></g>'+
+      '<path class="u-stem" d="M50 50 L50 80 Q50 88 42 88 Q36 88 36 82" fill="none"/>';
+    roofCard.append(umb);
+  }
+  function update(){
+    const t=(typeof telemetry!=='undefined'&&telemetry)||{};
+    const fresh=typeof lastRx!=='undefined'&&!!lastRx&&Date.now()-lastRx<=20000;
+    const warn=num(t.wind_warning_rpm),crit=num(t.wind_critical_rpm);
+    const rpm=num(t.rpm),gust=num(t.wind_gust_rpm);
+    const wmax=Math.max(crit?crit*1.25:0,warn?warn*1.5:0,100,(gust||0)*1.1,(rpm||0)*1.1);
+    const windTicks=[];if(warn!==null)windTicks.push([warn/wmax,'#ff9e76']);if(crit!==null)windTicks.push([crit/wmax,'#ff657a']);
+    const wState=v=>v===null?'idle':crit!==null&&v>=crit?'crit':warn!==null&&v>=warn?'warn':'ok';
+    if(gauges.rpm){setTicks(gauges.rpm,windTicks);setVal(gauges.rpm,rpm===null?NaN:rpm/wmax,wState(rpm),rpm===null?'--':Math.round(rpm/wmax*100)+'%')}
+    if(gauges.gust){setTicks(gauges.gust,windTicks);setVal(gauges.gust,gust===null?NaN:gust/wmax,wState(gust),gust===null?'--':Math.round(gust/wmax*100)+'%')}
+    if(gauges.temp){
+      const tv=num(t.temperature_corrected_c??t.temperature_c),lo=0,hi=60;
+      const tc=t.temp_thresholds_configured===true?num(t.temp_close_c):null,to=t.temp_thresholds_configured===true?num(t.temp_open_c):null;
+      const tt=[];if(tc!==null)tt.push([(tc-lo)/(hi-lo),'#f2de82']);if(to!==null)tt.push([(to-lo)/(hi-lo),'#ff9e76']);
+      setTicks(gauges.temp,tt);
+      setVal(gauges.temp,tv===null?NaN:(tv-lo)/(hi-lo),tv===null?'idle':to!==null&&tv>=to?'warn':'ok',tv===null?'--':Math.round(tv)+'°');
+    }
+    for(const g of Object.values(gauges))g.s.classList.toggle('stale',!fresh);
+    if(umb){
+      const p=String(roof.textContent||'').toUpperCase();
+      umb.dataset.state=p.includes('OPEN')?'open':p.includes('CLOS')?'closed':'unknown';
+      umb.classList.toggle('stale',!fresh);
+    }
+  }
+  setInterval(update,700);update();
+
+  // Diagnostics readiness ring — counts levels already rendered by the V0.7.14 panel.
+  const rows=document.getElementById('swgDiagRows'),overall=document.getElementById('swgDiagOverall');
+  if(rows&&overall){
+    const box=document.createElement('div');box.className='hud-ready';
+    const ring=makeGauge('ready','#2fb7e8','#4fe0b5');ring.s.classList.add('ready-ring');
+    const info=document.createElement('div');info.className='ready-info';
+    box.append(ring.s,info);overall.before(box);
+    const CHECK=['PASS','PENDING','NO DATA','OBSERVE','FAULT','STALE'];
+    const paint=()=>{
+      const counts={};[...rows.children].forEach(r=>{const b=r.querySelector('b');if(b){const k=b.textContent.trim();counts[k]=(counts[k]||0)+1}});
+      const total=CHECK.reduce((s,k)=>s+(counts[k]||0),0),pass=counts.PASS||0;
+      const bad=(counts.FAULT||0)+(counts.STALE||0);
+      setVal(ring,total?pass/total:NaN,bad?'crit':pass===total?'ok':'warn',total?pass+'/'+total:'--');
+      info.replaceChildren();
+      const h=document.createElement('strong');h.textContent='Commissioning Readiness';info.append(h);
+      const chips=document.createElement('div');chips.className='ready-chips';
+      for(const k of ['PASS','PENDING','NO DATA','OBSERVE','FAULT','STALE','MANUAL TEST','RF OFF','INFO'])if(counts[k]){
+        const c=document.createElement('span');c.className='chip chip-'+k.replace(/\s+/g,'-').toLowerCase();c.textContent=k+' · '+counts[k];chips.append(c);
+      }
+      info.append(chips);
+    };
+    new MutationObserver(paint).observe(rows,{childList:true,subtree:true,characterData:true});paint();
+  }
+})();
+</script>
+
+</body></html>
